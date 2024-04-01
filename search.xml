@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>llama-index</title>
+      <link href="/2024/04/01/llama-index/"/>
+      <url>/2024/04/01/llama-index/</url>
+      
+        <content type="html"><![CDATA[<h1 id="LLAMAINDEX"><a href="#LLAMAINDEX" class="headerlink" title="LLAMAINDEX"></a>LLAMAINDEX</h1><h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><ol><li><p><strong>摘要提取</strong>：通過查詢摘要來對 1GB 的數據集進行總結。LLamaIndex 可以檢索相關節點並合成摘要。</p></li><li><p><strong>位置實體提取</strong>：通過查詢從數據集中提取類似位置的實體來進行位置查詢。</p></li><li><p><strong>問答記錄</strong>：通過查詢問題的答案來記錄問答。</p></li><li><p><strong>聊天機器人增強</strong>：通過查詢對用戶消息的回應來增強數據聊天機器人。</p></li><li><p><strong>結構化分析</strong>：使用 LLamaIndex 可以進行對結構化數據，如表格、CSV 文件和數據庫等的結構化分析。</p></li></ol><h2 id="步驟流程"><a href="#步驟流程" class="headerlink" title="步驟流程"></a>步驟流程</h2><img src="/2024/04/01/llama-index/1.webp" class="" title="Alt text"><p><em><strong>關鍵步驟是將數據加載文件，解析為節點</strong></em></p><img src="/2024/04/01/llama-index/2.webp" class="" title="Alt text"><p><em><strong>在文件&#x2F;節點上構建索引</strong></em></p><img src="/2024/04/01/llama-index/3.webp" class="" title="Alt text"><p><em><strong>查詢索引以檢索相關節點然後解析響應對象。索引也可以持久化並從磁盤重新加載。</strong></em></p><img src="/2024/04/01/llama-index/4.webp" class="" title="Alt text">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Azure Ooenai ,embedding ,RAG </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Qrant</title>
       <link href="/2024/04/01/Qrant/"/>
       <url>/2024/04/01/Qrant/</url>

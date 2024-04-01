@@ -3,11 +3,11 @@
   <title>考研戰士Tim</title>
   
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://timtimtimchen.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
-  <updated>2024-04-01T14:00:25.192Z</updated>
-  <id>http://example.com/</id>
+  <link href="https://timtimtimchen.github.io/"/>
+  <updated>2024-04-01T14:23:56.965Z</updated>
+  <id>https://timtimtimchen.github.io/</id>
   
   <author>
     <name>TIM</name>
@@ -17,9 +17,31 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>llama-index</title>
+    <link href="https://timtimtimchen.github.io/2024/04/01/llama-index/"/>
+    <id>https://timtimtimchen.github.io/2024/04/01/llama-index/</id>
+    <published>2024-04-01T14:23:06.000Z</published>
+    <updated>2024-04-01T14:23:56.965Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="LLAMAINDEX"><a href="#LLAMAINDEX" class="headerlink" title="LLAMAINDEX"></a>LLAMAINDEX</h1><h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><ol><li><p><strong>摘要提取</strong>：通過查詢摘要來對 1GB 的數據集進行總結。LLamaIndex 可以檢索相關節點並合成摘要。</p></li><li><p><strong>位置實體提取</strong>：通過查詢從數據集中提取類似位置的實體來進行位置查詢。</p></li><li><p><strong>問答記錄</strong>：通過查詢問題的答案來記錄問答。</p></li><li><p><strong>聊天機器人增強</strong>：通過查詢對用戶消息的回應來增強數據聊天機器人。</p></li><li><p><strong>結構化分析</strong>：使用 LLamaIndex 可以進行對結構化數據，如表格、CSV 文件和數據庫等的結構化分析。</p></li></ol><h2 id="步驟流程"><a href="#步驟流程" class="headerlink" title="步驟流程"></a>步驟流程</h2><img src="/2024/04/01/llama-index/1.webp" class="" title="Alt text"><p><em><strong>關鍵步驟是將數據加載文件，解析為節點</strong></em></p><img src="/2024/04/01/llama-index/2.webp" class="" title="Alt text"><p><em><strong>在文件&#x2F;節點上構建索引</strong></em></p><img src="/2024/04/01/llama-index/3.webp" class="" title="Alt text"><p><em><strong>查詢索引以檢索相關節點然後解析響應對象。索引也可以持久化並從磁盤重新加載。</strong></em></p><img src="/2024/04/01/llama-index/4.webp" class="" title="Alt text">]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;LLAMAINDEX&quot;&gt;&lt;a href=&quot;#LLAMAINDEX&quot; class=&quot;headerlink&quot; title=&quot;LLAMAINDEX&quot;&gt;&lt;/a&gt;LLAMAINDEX&lt;/h1&gt;&lt;h2 id=&quot;功能&quot;&gt;&lt;a href=&quot;#功能&quot; class=&quot;headerli</summary>
+      
+    
+    
+    
+    
+    <category term="Azure Ooenai ,embedding ,RAG" scheme="https://timtimtimchen.github.io/tags/Azure-Ooenai-embedding-RAG/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Qrant</title>
-    <link href="http://example.com/2024/04/01/Qrant/"/>
-    <id>http://example.com/2024/04/01/Qrant/</id>
+    <link href="https://timtimtimchen.github.io/2024/04/01/Qrant/"/>
+    <id>https://timtimtimchen.github.io/2024/04/01/Qrant/</id>
     <published>2024-04-01T13:52:38.000Z</published>
     <updated>2024-04-01T14:00:25.192Z</updated>
     
@@ -34,14 +56,14 @@
     
     
     
-    <category term="vector" scheme="http://example.com/tags/vector/"/>
+    <category term="vector" scheme="https://timtimtimchen.github.io/tags/vector/"/>
     
   </entry>
   
   <entry>
     <title>Flowise</title>
-    <link href="http://example.com/2024/04/01/Flowise/"/>
-    <id>http://example.com/2024/04/01/Flowise/</id>
+    <link href="https://timtimtimchen.github.io/2024/04/01/Flowise/"/>
+    <id>https://timtimtimchen.github.io/2024/04/01/Flowise/</id>
     <published>2024-04-01T13:21:43.000Z</published>
     <updated>2024-04-01T13:52:15.620Z</updated>
     
@@ -56,7 +78,7 @@
     
     
     
-    <category term="flowise , qrant , embedding" scheme="http://example.com/tags/flowise-qrant-embedding/"/>
+    <category term="flowise , qrant , embedding" scheme="https://timtimtimchen.github.io/tags/flowise-qrant-embedding/"/>
     
   </entry>
   
