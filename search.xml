@@ -20,7 +20,11 @@
       
         <tags>
             
-            <tag> youtube,embedding,pinecone </tag>
+            <tag> embedding </tag>
+            
+            <tag> youtube </tag>
+            
+            <tag> pinecone </tag>
             
         </tags>
       
@@ -45,7 +49,9 @@
       
         <tags>
             
-            <tag> video-retalking,RVC-BossGPT-SoVITS </tag>
+            <tag> video-retalking </tag>
+            
+            <tag> RVC-BossGPT-SoVITS </tag>
             
         </tags>
       
@@ -70,7 +76,9 @@
       
         <tags>
             
-            <tag> Azure-Openai ,embedding ,RAG </tag>
+            <tag> Azure-Openai </tag>
+            
+            <tag> embedding ,RAG </tag>
             
         </tags>
       
@@ -120,7 +128,11 @@
       
         <tags>
             
-            <tag> flowise , qrant , embedding </tag>
+            <tag> flowise </tag>
+            
+            <tag> qrant </tag>
+            
+            <tag> embedding </tag>
             
         </tags>
       

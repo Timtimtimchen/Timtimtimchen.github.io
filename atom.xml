@@ -6,7 +6,7 @@
   <link href="https://timtimtimchen.github.io/atom.xml" rel="self"/>
   
   <link href="https://timtimtimchen.github.io/"/>
-  <updated>2024-04-03T17:41:39.566Z</updated>
+  <updated>2024-04-03T18:19:21.900Z</updated>
   <id>https://timtimtimchen.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://timtimtimchen.github.io/2024/04/04/youtube-summary/"/>
     <id>https://timtimtimchen.github.io/2024/04/04/youtube-summary/</id>
     <published>2024-04-03T17:32:34.000Z</published>
-    <updated>2024-04-03T17:41:39.566Z</updated>
+    <updated>2024-04-03T18:19:21.900Z</updated>
     
     <content type="html"><![CDATA[<h1 id="youtube摘要"><a href="#youtube摘要" class="headerlink" title="youtube摘要"></a>youtube摘要</h1><h2 id="輸入影片網址即可摘要內容"><a href="#輸入影片網址即可摘要內容" class="headerlink" title="輸入影片網址即可摘要內容"></a>輸入影片網址即可摘要內容</h2><p><a href="https://github.com/Timtimtimchen/youtube-embedding-Summary">專案程式碼</a></p><p><em><strong>如要使用請在上方網址’github’後面加上’tocolab’</strong></em></p>]]></content>
     
@@ -36,7 +36,11 @@
     <category term="AI" scheme="https://timtimtimchen.github.io/categories/AI/"/>
     
     
-    <category term="youtube,embedding,pinecone" scheme="https://timtimtimchen.github.io/tags/youtube-embedding-pinecone/"/>
+    <category term="embedding" scheme="https://timtimtimchen.github.io/tags/embedding/"/>
+    
+    <category term="youtube" scheme="https://timtimtimchen.github.io/tags/youtube/"/>
+    
+    <category term="pinecone" scheme="https://timtimtimchen.github.io/tags/pinecone/"/>
     
   </entry>
   
@@ -45,7 +49,7 @@
     <link href="https://timtimtimchen.github.io/2024/04/04/video-retalking-RVC-BossGPT-SoVITS/"/>
     <id>https://timtimtimchen.github.io/2024/04/04/video-retalking-RVC-BossGPT-SoVITS/</id>
     <published>2024-04-03T17:12:32.000Z</published>
-    <updated>2024-04-03T17:29:11.370Z</updated>
+    <updated>2024-04-03T18:20:32.771Z</updated>
     
     <content type="html"><![CDATA[<h1 id="RVC-Boss-GPT-SoVITS-語音合成模型"><a href="#RVC-Boss-GPT-SoVITS-語音合成模型" class="headerlink" title="RVC-Boss&#x2F;GPT-SoVITS 語音合成模型"></a>RVC-Boss&#x2F;GPT-SoVITS 語音合成模型</h1><p><a href="https://github.com/Timtimtimchen/video-retalking-RVC-BossGPT-SoVITS"><strong>程式碼網址</strong></a></p><h2 id="1-初始執行畫面"><a href="#1-初始執行畫面" class="headerlink" title="1.初始執行畫面"></a>1.初始執行畫面</h2><img src="/2024/04/04/video-retalking-RVC-BossGPT-SoVITS/A.png" class="" title="image"><h2 id="2-把音檔放進檔案根目錄"><a href="#2-把音檔放進檔案根目錄" class="headerlink" title="2.把音檔放進檔案根目錄"></a>2.把音檔放進檔案根目錄</h2><img src="/2024/04/04/video-retalking-RVC-BossGPT-SoVITS/b.png" class="" title="image"><h2 id="3-設定變數"><a href="#3-設定變數" class="headerlink" title="3.設定變數"></a>3.設定變數</h2><h4 id="1-過濾人聲音"><a href="#1-過濾人聲音" class="headerlink" title="1.過濾人聲音"></a>1.過濾人聲音</h4><h4 id="2-分割音檔"><a href="#2-分割音檔" class="headerlink" title="2.分割音檔"></a>2.分割音檔</h4><h4 id="3-音檔位置"><a href="#3-音檔位置" class="headerlink" title="3.音檔位置"></a>3.音檔位置</h4><img src="/2024/04/04/video-retalking-RVC-BossGPT-SoVITS/C.png" class="" title="image"><h2 id="4-分割音檔合成list"><a href="#4-分割音檔合成list" class="headerlink" title="4.分割音檔合成list"></a>4.分割音檔合成list</h2><p>list位置在框內位置 可自訂</p><img src="/2024/04/04/video-retalking-RVC-BossGPT-SoVITS/D.png" class="" title="image"><h2 id="5-Speech-to-text-proofreading-tool"><a href="#5-Speech-to-text-proofreading-tool" class="headerlink" title="5.Speech to text proofreading tool"></a>5.Speech to text proofreading tool</h2><img src="/2024/04/04/video-retalking-RVC-BossGPT-SoVITS/e.png" class="" title="image"><h2 id="6-終端給WebUI網址"><a href="#6-終端給WebUI網址" class="headerlink" title="6.終端給WebUI網址"></a>6.終端給WebUI網址</h2><p>確認沒問題就可關閉網頁</p><h2 id="7-第二個頁面-1-gtp-sovits-TTS"><a href="#7-第二個頁面-1-gtp-sovits-TTS" class="headerlink" title="7.第二個頁面(1-gtp-sovits-TTS)"></a>7.第二個頁面(1-gtp-sovits-TTS)</h2><img src="/2024/04/04/video-retalking-RVC-BossGPT-SoVITS/f.png" class="" title="image"><p>設置實驗名也就是模型名，不要有中文！然後第一個輸入的是標註文件路徑，注意是文件路徑！示例：&#x2F;content&#x2F;GPT-SoVITS&#x2F;output&#x2F;asr_opt&#x2F;slicer_opt.list 注意後面的文件名必須要輸進去！打不開就再三檢查路徑是否正確！必須要有.list的後綴！！！第二個輸入的是切分音頻文件夾路徑 示例：&#x2F;content&#x2F;GPT-SoVITS&#x2F;output&#x2F;slicer_opt。注意複製的路徑都不能有引號！！！千萬不能有引號！然後點一鍵三連。結束 &#x2F;content&#x2F;GPT-SoVITS&#x2F;logs 裡會有檔案 沒有就是錯</p><h2 id="訓練-1B-Fine-tuned-training"><a href="#訓練-1B-Fine-tuned-training" class="headerlink" title="訓練(1B-Fine-tuned training)"></a>訓練(1B-Fine-tuned training)</h2><p>點進 1B-Fine-tuned training 兩個按鈕都按 </p><img src="/2024/04/04/video-retalking-RVC-BossGPT-SoVITS/g.png" class="" title="image"><p>如報錯就是gpu size要改</p><h2 id="1c-inference"><a href="#1c-inference" class="headerlink" title="1c-inference"></a>1c-inference</h2><img src="/2024/04/04/video-retalking-RVC-BossGPT-SoVITS/h.png" class="" title="image"><p>GPT models list 跟 SoVITS models list 都要選數字大的 如果沒選項點refresh 再來 Open TTS inference WEBUI打勾</p><h2 id="終端給新網頁-雙擊"><a href="#終端給新網頁-雙擊" class="headerlink" title="終端給新網頁 雙擊"></a>終端給新網頁 雙擊</h2><img src="/2024/04/04/video-retalking-RVC-BossGPT-SoVITS/i.png" class="" title="image"><p>給十秒內的影片並給影片中文內容<br> 再來給他你想讓他講的句子 按start<br> 音檔生成在右手邊</p><h2 id="加video-retalking使影片更生動"><a href="#加video-retalking使影片更生動" class="headerlink" title="加video-retalking使影片更生動"></a>加video-retalking使影片更生動</h2><h3 id="作品"><a href="#作品" class="headerlink" title="作品:"></a>作品:</h3><p><video controls src="./aa.mp4" title="Title"></video></p>]]></content>
     
@@ -60,7 +64,9 @@
     <category term="AI" scheme="https://timtimtimchen.github.io/categories/AI/"/>
     
     
-    <category term="video-retalking,RVC-BossGPT-SoVITS" scheme="https://timtimtimchen.github.io/tags/video-retalking-RVC-BossGPT-SoVITS/"/>
+    <category term="video-retalking" scheme="https://timtimtimchen.github.io/tags/video-retalking/"/>
+    
+    <category term="RVC-BossGPT-SoVITS" scheme="https://timtimtimchen.github.io/tags/RVC-BossGPT-SoVITS/"/>
     
   </entry>
   
@@ -69,7 +75,7 @@
     <link href="https://timtimtimchen.github.io/2024/04/01/llama-index/"/>
     <id>https://timtimtimchen.github.io/2024/04/01/llama-index/</id>
     <published>2024-04-01T14:23:06.000Z</published>
-    <updated>2024-04-03T15:56:02.787Z</updated>
+    <updated>2024-04-03T18:20:47.976Z</updated>
     
     <content type="html"><![CDATA[<h1 id="LLAMAINDEX"><a href="#LLAMAINDEX" class="headerlink" title="LLAMAINDEX"></a>LLAMAINDEX</h1><h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><ol><li><p><strong>摘要提取</strong>：通過查詢摘要來對 1GB 的數據集進行總結。LLamaIndex 可以檢索相關節點並合成摘要。</p></li><li><p><strong>位置實體提取</strong>：通過查詢從數據集中提取類似位置的實體來進行位置查詢。</p></li><li><p><strong>問答記錄</strong>：通過查詢問題的答案來記錄問答。</p></li><li><p><strong>聊天機器人增強</strong>：通過查詢對用戶消息的回應來增強數據聊天機器人。</p></li><li><p><strong>結構化分析</strong>：使用 LLamaIndex 可以進行對結構化數據，如表格、CSV 文件和數據庫等的結構化分析。</p></li></ol><h2 id="步驟流程"><a href="#步驟流程" class="headerlink" title="步驟流程"></a>步驟流程</h2><img src="/2024/04/01/llama-index/1.webp" class="" title="Alt text"><p><em><strong>關鍵步驟是將數據加載文件，解析為節點</strong></em></p><img src="/2024/04/01/llama-index/2.webp" class="" title="Alt text"><p><em><strong>在文件&#x2F;節點上構建索引</strong></em></p><img src="/2024/04/01/llama-index/3.webp" class="" title="Alt text"><p><em><strong>查詢索引以檢索相關節點然後解析響應對象。索引也可以持久化並從磁盤重新加載。</strong></em></p><img src="/2024/04/01/llama-index/4.webp" class="" title="Alt text">]]></content>
     
@@ -84,7 +90,9 @@
     <category term="AI" scheme="https://timtimtimchen.github.io/categories/AI/"/>
     
     
-    <category term="Azure-Openai ,embedding ,RAG" scheme="https://timtimtimchen.github.io/tags/Azure-Openai-embedding-RAG/"/>
+    <category term="Azure-Openai" scheme="https://timtimtimchen.github.io/tags/Azure-Openai/"/>
+    
+    <category term="embedding ,RAG" scheme="https://timtimtimchen.github.io/tags/embedding-RAG/"/>
     
   </entry>
   
@@ -117,7 +125,7 @@
     <link href="https://timtimtimchen.github.io/2024/04/01/Flowise/"/>
     <id>https://timtimtimchen.github.io/2024/04/01/Flowise/</id>
     <published>2024-04-01T13:21:43.000Z</published>
-    <updated>2024-04-03T15:56:06.848Z</updated>
+    <updated>2024-04-03T18:21:06.501Z</updated>
     
     <content type="html"><![CDATA[<h1 id="部屬"><a href="#部屬" class="headerlink" title="部屬"></a>部屬</h1><h2 id="官方部屬文件"><a href="#官方部屬文件" class="headerlink" title="官方部屬文件"></a>官方部屬文件</h2><h3 id="github"><a href="#github" class="headerlink" title="github"></a>github</h3><p><a href="https://github.com/FlowiseAI/Flowise">https://github.com/FlowiseAI/Flowise</a></p><h3 id="docs"><a href="#docs" class="headerlink" title="docs"></a>docs</h3><p><a href="https://docs.flowiseai.com/">https://docs.flowiseai.com/</a></p><h2 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h2><h3 id="測試機"><a href="#測試機" class="headerlink" title="測試機"></a>測試機</h3><p>ai 雲端測試機: <a href="http://10.0.194.20:4000/">http://10.0.194.20:4000/</a><br>local ai 主機: <a href="http://10.200.21.47:3000/">http://10.200.21.47:3000/</a></p><p>部屬雲端是為了接入eip，因為local ai 主機會有網域問題</p><h3 id="正式機"><a href="#正式機" class="headerlink" title="正式機"></a>正式機</h3><p>待創建</p><h2 id="部屬方法"><a href="#部屬方法" class="headerlink" title="部屬方法"></a>部屬方法</h2><ol><li><p>clone public repo</p> <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/FlowiseAI/Flowise.git</span><br></pre></td></tr></table></figure></li><li><p>安裝docker 及 docker compose<br> 這部分可參考官方說明<a href="https://docs.docker.com/engine/install/">https://docs.docker.com/engine/install/</a></p></li><li><p>cd docker and copy .env.template</p> <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd docker &amp;&amp;</span><br><span class="line">cp .env.example .env</span><br></pre></td></tr></table></figure></li><li><p>更改<code>.env</code><br> 主要要更改的部分有</p><ul><li>FILE_SIZE_LIMIT: 避免embedding pdf 檔案過大</li><li>USERNAME &#x2F; PASSWORD</li><li>CORS相關設定，若要嵌入至其他網頁時若沒有設定會被擋</li><li>DATABASE 如果有要做連接資料須寫在這邊 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">PORT=4000</span><br><span class="line">DATABASE_PATH=/root/.flowise</span><br><span class="line">APIKEY_PATH=/root/.flowise</span><br><span class="line">SECRETKEY_PATH=/root/.flowise</span><br><span class="line">LOG_PATH=/root/.flowise/logs</span><br><span class="line">BLOB_STORAGE_PATH=/root/.flowise/storage</span><br><span class="line"></span><br><span class="line">CORS_ORIGINS=&quot;*&quot;</span><br><span class="line">IFRAME_ORIGINS=&quot;*&quot;</span><br><span class="line">EMBEDDING_ORIGINS=&quot;*&quot;</span><br><span class="line"></span><br><span class="line"># NUMBER_OF_PROXIES= 1</span><br><span class="line"></span><br><span class="line"># DATABASE_TYPE=postgres</span><br><span class="line"># DATABASE_PORT=&quot;&quot;</span><br><span class="line"># DATABASE_HOST=&quot;&quot;</span><br><span class="line"># DATABASE_NAME=&quot;flowise&quot;</span><br><span class="line"># DATABASE_USER=&quot;&quot;</span><br><span class="line"># DATABASE_PASSWORD=&quot;&quot;</span><br><span class="line"># DATABASE_SSL=true</span><br><span class="line"># DATABASE_SSL_KEY_BASE64=&lt;Self signed certificate in BASE64&gt;</span><br><span class="line"></span><br><span class="line">FLOWISE_USERNAME=it</span><br><span class="line">FLOWISE_PASSWORD=itit</span><br><span class="line"># FLOWISE_SECRETKEY_OVERWRITE=myencryptionkey</span><br><span class="line">FLOWISE_FILE_SIZE_LIMIT=200mb</span><br><span class="line"># DEBUG=true</span><br><span class="line"># LOG_LEVEL=debug (error | warn | info | verbose | debug)</span><br><span class="line"># TOOL_FUNCTION_BUILTIN_DEP=crypto,fs</span><br><span class="line"># TOOL_FUNCTION_EXTERNAL_DEP=moment,lodash</span><br><span class="line"></span><br><span class="line"># LANGCHAIN_TRACING_V2=true</span><br><span class="line"># LANGCHAIN_ENDPOINT=https://api.smith.langchain.com</span><br><span class="line"># LANGCHAIN_API_KEY=your_api_key</span><br><span class="line"># LANGCHAIN_PROJECT=your_project</span><br><span class="line"></span><br><span class="line"># DISABLE_FLOWISE_TELEMETRY=true</span><br></pre></td></tr></table></figure></li></ul></li><li><p>起<code>docker compose</code></p> <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker compose up -d</span><br></pre></td></tr></table></figure><p>起來之後就會在設定的port號run起來了</p></li></ol><h1 id="FLOWISE操作-link"><a href="#FLOWISE操作-link" class="headerlink" title="FLOWISE操作#link"></a>FLOWISE操作#<a href = "https://ai.zerozero.com.tw:4000/">link</a></h1><p><em><strong>機密資料一律用azure openai</strong></em></p><img src="/2024/04/01/Flowise/1.png" class="" title="photo"><h2 id="1-文檔embeding進qdrant"><a href="#1-文檔embeding進qdrant" class="headerlink" title="1.文檔embeding進qdrant"></a>1.文檔embeding進qdrant</h2><h3 id="先切分上傳文檔-並轉換為向量-丟進vector資料庫"><a href="#先切分上傳文檔-並轉換為向量-丟進vector資料庫" class="headerlink" title="先切分上傳文檔 並轉換為向量 丟進vector資料庫"></a>先切分上傳文檔 並轉換為向量 丟進vector資料庫</h3><p>接好線後 先按右上方綠色按鈕 將向量丟進qdrant</p><ul><li>1.chunk size是切是切分大小</li><li>2.chunk overlap 重疊部分</li><li>3.Connect Credential 輸入或新增openai金鑰</li><li>4.connect credential 輸入qrant API KEY</li><li>5.server 你Qdrant連線的url</li><li>6.collection name 你設定的qdrant collection名子<img src="/2024/04/01/Flowise/2.png" class="" title="photo"></li></ul><h2 id="2-查詢"><a href="#2-查詢" class="headerlink" title="2.查詢"></a>2.查詢</h2><h3 id="將query轉成vector-並做相似度查詢-將相近向量的語句-給ai作生成"><a href="#將query轉成vector-並做相似度查詢-將相近向量的語句-給ai作生成" class="headerlink" title="將query轉成vector 並做相似度查詢 將相近向量的語句 給ai作生成"></a>將query轉成vector 並做相似度查詢 將相近向量的語句 給ai作生成</h3><p>點右上紫色按鈕即可對話</p><ul><li>1 Connect Credential 輸入或新增openai金鑰</li><li>2 model name 一律gpt35</li></ul><img src="/2024/04/01/Flowise/3.png" class="" title="photo">]]></content>
     
@@ -132,7 +140,11 @@
     <category term="AI" scheme="https://timtimtimchen.github.io/categories/AI/"/>
     
     
-    <category term="flowise , qrant , embedding" scheme="https://timtimtimchen.github.io/tags/flowise-qrant-embedding/"/>
+    <category term="flowise" scheme="https://timtimtimchen.github.io/tags/flowise/"/>
+    
+    <category term="qrant" scheme="https://timtimtimchen.github.io/tags/qrant/"/>
+    
+    <category term="embedding" scheme="https://timtimtimchen.github.io/tags/embedding/"/>
     
   </entry>
   
