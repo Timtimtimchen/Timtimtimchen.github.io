@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://timtimtimchen.github.io/2024/04/04/youtube-summary/</loc>
+    
+    <lastmod>2024-04-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://timtimtimchen.github.io/2024/04/04/video-retalking-RVC-BossGPT-SoVITS/</loc>
+    
+    <lastmod>2024-04-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://timtimtimchen.github.io/categories/index.html</loc>
     
     <lastmod>2024-04-03</lastmod>
@@ -98,6 +116,20 @@
   
   <url>
     <loc>https://timtimtimchen.github.io/tags/Azure-Openai-embedding-RAG/</loc>
+    <lastmod>2024-04-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://timtimtimchen.github.io/tags/video-retalking-RVC-BossGPT-SoVITS/</loc>
+    <lastmod>2024-04-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://timtimtimchen.github.io/tags/youtube-embedding-pinecone/</loc>
     <lastmod>2024-04-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

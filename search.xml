@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>youtube-summary</title>
+      <link href="/2024/04/04/youtube-summary/"/>
+      <url>/2024/04/04/youtube-summary/</url>
+      
+        <content type="html"><![CDATA[<h1 id="youtube摘要"><a href="#youtube摘要" class="headerlink" title="youtube摘要"></a>youtube摘要</h1><h2 id="輸入影片網址即可摘要內容"><a href="#輸入影片網址即可摘要內容" class="headerlink" title="輸入影片網址即可摘要內容"></a>輸入影片網址即可摘要內容</h2><p><a href="https://github.com/Timtimtimchen/youtube-embedding-Summary">專案程式碼</a></p><p><em><strong>如要使用請在上方網址’github’後面加上’tocolab’</strong></em></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> AI </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> youtube,embedding,pinecone </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>video-retalking-RVC-BossGPT-SoVITS</title>
+      <link href="/2024/04/04/video-retalking-RVC-BossGPT-SoVITS/"/>
+      <url>/2024/04/04/video-retalking-RVC-BossGPT-SoVITS/</url>
+      
+        <content type="html"><![CDATA[<h1 id="RVC-Boss-GPT-SoVITS-語音合成模型"><a href="#RVC-Boss-GPT-SoVITS-語音合成模型" class="headerlink" title="RVC-Boss&#x2F;GPT-SoVITS 語音合成模型"></a>RVC-Boss&#x2F;GPT-SoVITS 語音合成模型</h1><p><a href="https://github.com/Timtimtimchen/video-retalking-RVC-BossGPT-SoVITS"><strong>程式碼網址</strong></a></p><h2 id="1-初始執行畫面"><a href="#1-初始執行畫面" class="headerlink" title="1.初始執行畫面"></a>1.初始執行畫面</h2><img src="/2024/04/04/video-retalking-RVC-BossGPT-SoVITS/A.png" class="" title="image"><h2 id="2-把音檔放進檔案根目錄"><a href="#2-把音檔放進檔案根目錄" class="headerlink" title="2.把音檔放進檔案根目錄"></a>2.把音檔放進檔案根目錄</h2><img src="/2024/04/04/video-retalking-RVC-BossGPT-SoVITS/b.png" class="" title="image"><h2 id="3-設定變數"><a href="#3-設定變數" class="headerlink" title="3.設定變數"></a>3.設定變數</h2><h4 id="1-過濾人聲音"><a href="#1-過濾人聲音" class="headerlink" title="1.過濾人聲音"></a>1.過濾人聲音</h4><h4 id="2-分割音檔"><a href="#2-分割音檔" class="headerlink" title="2.分割音檔"></a>2.分割音檔</h4><h4 id="3-音檔位置"><a href="#3-音檔位置" class="headerlink" title="3.音檔位置"></a>3.音檔位置</h4><img src="/2024/04/04/video-retalking-RVC-BossGPT-SoVITS/C.png" class="" title="image"><h2 id="4-分割音檔合成list"><a href="#4-分割音檔合成list" class="headerlink" title="4.分割音檔合成list"></a>4.分割音檔合成list</h2><p>list位置在框內位置 可自訂</p><img src="/2024/04/04/video-retalking-RVC-BossGPT-SoVITS/D.png" class="" title="image"><h2 id="5-Speech-to-text-proofreading-tool"><a href="#5-Speech-to-text-proofreading-tool" class="headerlink" title="5.Speech to text proofreading tool"></a>5.Speech to text proofreading tool</h2><img src="/2024/04/04/video-retalking-RVC-BossGPT-SoVITS/e.png" class="" title="image"><h2 id="6-終端給WebUI網址"><a href="#6-終端給WebUI網址" class="headerlink" title="6.終端給WebUI網址"></a>6.終端給WebUI網址</h2><p>確認沒問題就可關閉網頁</p><h2 id="7-第二個頁面-1-gtp-sovits-TTS"><a href="#7-第二個頁面-1-gtp-sovits-TTS" class="headerlink" title="7.第二個頁面(1-gtp-sovits-TTS)"></a>7.第二個頁面(1-gtp-sovits-TTS)</h2><img src="/2024/04/04/video-retalking-RVC-BossGPT-SoVITS/f.png" class="" title="image"><p>設置實驗名也就是模型名，不要有中文！然後第一個輸入的是標註文件路徑，注意是文件路徑！示例：&#x2F;content&#x2F;GPT-SoVITS&#x2F;output&#x2F;asr_opt&#x2F;slicer_opt.list 注意後面的文件名必須要輸進去！打不開就再三檢查路徑是否正確！必須要有.list的後綴！！！第二個輸入的是切分音頻文件夾路徑 示例：&#x2F;content&#x2F;GPT-SoVITS&#x2F;output&#x2F;slicer_opt。注意複製的路徑都不能有引號！！！千萬不能有引號！然後點一鍵三連。結束 &#x2F;content&#x2F;GPT-SoVITS&#x2F;logs 裡會有檔案 沒有就是錯</p><h2 id="訓練-1B-Fine-tuned-training"><a href="#訓練-1B-Fine-tuned-training" class="headerlink" title="訓練(1B-Fine-tuned training)"></a>訓練(1B-Fine-tuned training)</h2><p>點進 1B-Fine-tuned training 兩個按鈕都按 </p><img src="/2024/04/04/video-retalking-RVC-BossGPT-SoVITS/g.png" class="" title="image"><p>如報錯就是gpu size要改</p><h2 id="1c-inference"><a href="#1c-inference" class="headerlink" title="1c-inference"></a>1c-inference</h2><img src="/2024/04/04/video-retalking-RVC-BossGPT-SoVITS/h.png" class="" title="image"><p>GPT models list 跟 SoVITS models list 都要選數字大的 如果沒選項點refresh 再來 Open TTS inference WEBUI打勾</p><h2 id="終端給新網頁-雙擊"><a href="#終端給新網頁-雙擊" class="headerlink" title="終端給新網頁 雙擊"></a>終端給新網頁 雙擊</h2><img src="/2024/04/04/video-retalking-RVC-BossGPT-SoVITS/i.png" class="" title="image"><p>給十秒內的影片並給影片中文內容<br> 再來給他你想讓他講的句子 按start<br> 音檔生成在右手邊</p><h2 id="加video-retalking使影片更生動"><a href="#加video-retalking使影片更生動" class="headerlink" title="加video-retalking使影片更生動"></a>加video-retalking使影片更生動</h2><h3 id="作品"><a href="#作品" class="headerlink" title="作品:"></a>作品:</h3><p><video controls src="./aa.mp4" title="Title"></video></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> AI </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> video-retalking,RVC-BossGPT-SoVITS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>llama-index</title>
       <link href="/2024/04/01/llama-index/"/>
       <url>/2024/04/01/llama-index/</url>

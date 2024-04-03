@@ -1,3 +1,5 @@
+https://timtimtimchen.github.io/2024/04/04/youtube-summary/
+https://timtimtimchen.github.io/2024/04/04/video-retalking-RVC-BossGPT-SoVITS/
 https://timtimtimchen.github.io/categories/index.html
 https://timtimtimchen.github.io/2024/04/01/Flowise/
 https://timtimtimchen.github.io/2024/04/01/llama-index/
@@ -10,4 +12,6 @@ https://timtimtimchen.github.io/
 https://timtimtimchen.github.io/tags/flowise-qrant-embedding/
 https://timtimtimchen.github.io/tags/vector/
 https://timtimtimchen.github.io/tags/Azure-Openai-embedding-RAG/
+https://timtimtimchen.github.io/tags/video-retalking-RVC-BossGPT-SoVITS/
+https://timtimtimchen.github.io/tags/youtube-embedding-pinecone/
 https://timtimtimchen.github.io/categories/AI/
