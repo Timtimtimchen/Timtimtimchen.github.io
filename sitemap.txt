@@ -1,7 +1,8 @@
-https://timtimtimchen.github.io/2024/04/01/llama-index/
+https://timtimtimchen.github.io/categories/index.html
 https://timtimtimchen.github.io/2024/04/01/Flowise/
-https://timtimtimchen.github.io/projects/index.html
+https://timtimtimchen.github.io/2024/04/01/llama-index/
 https://timtimtimchen.github.io/2024/04/01/Qrant/
+https://timtimtimchen.github.io/projects/index.html
 https://timtimtimchen.github.io/certificate/index.html
 https://timtimtimchen.github.io/about/index.html
 https://timtimtimchen.github.io/archives/index.html
@@ -9,3 +10,4 @@ https://timtimtimchen.github.io/
 https://timtimtimchen.github.io/tags/flowise-qrant-embedding/
 https://timtimtimchen.github.io/tags/vector/
 https://timtimtimchen.github.io/tags/Azure-Openai-embedding-RAG/
+https://timtimtimchen.github.io/categories/AI/

@@ -741,15 +741,23 @@ footer {
   height: 0;
 }
 
+.category-list {
+  display: flex;
+}
+
 .tagcloud a, .category-list-item a {
-  margin: 4px 6px 4px 0;
-  display: inline-table;
+  font-size: 90px;
+  display: grid;
+  place-items: center;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  margin: 4px 60px 4px;
   padding: 10px 20px;
   background: #1f3041;
   border-radius: 6%;
   vertical-align: middle;
-  color: cadetblue;
-  font-size: 1.2em;
+  color: yellow;
 }
 .tagcloud a:hover, .category-list-item a:hover {
   color: white;
@@ -761,6 +769,7 @@ footer {
 .category-list-item .category-list-count {
   color: aqua;
   align-self: baseline;
+  display: none;
 }
 
 .category-list-child li {
