@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://timtimtimchen.github.io/about/index.html</loc>
+    
+    <lastmod>2024-04-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://timtimtimchen.github.io/2024/04/01/llama-index/</loc>
+    
+    <lastmod>2024-04-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://timtimtimchen.github.io/2024/04/01/Qrant/</loc>
+    
+    <lastmod>2024-04-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://timtimtimchen.github.io/2024/04/04/meta-spark/</loc>
     
     <lastmod>2024-04-04</lastmod>
@@ -20,25 +47,7 @@
   </url>
   
   <url>
-    <loc>https://timtimtimchen.github.io/about/index.html</loc>
-    
-    <lastmod>2024-04-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://timtimtimchen.github.io/2024/04/01/Flowise/</loc>
-    
-    <lastmod>2024-04-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://timtimtimchen.github.io/2024/04/01/llama-index/</loc>
     
     <lastmod>2024-04-03</lastmod>
     
@@ -66,15 +75,6 @@
   
   <url>
     <loc>https://timtimtimchen.github.io/categories/index.html</loc>
-    
-    <lastmod>2024-04-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://timtimtimchen.github.io/2024/04/01/Qrant/</loc>
     
     <lastmod>2024-04-03</lastmod>
     
@@ -145,7 +145,7 @@
   </url>
   
   <url>
-    <loc>https://timtimtimchen.github.io/tags/embedding-RAG/</loc>
+    <loc>https://timtimtimchen.github.io/tags/RAG/</loc>
     <lastmod>2024-04-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -166,20 +166,6 @@
   </url>
   
   <url>
-    <loc>https://timtimtimchen.github.io/tags/youtube/</loc>
-    <lastmod>2024-04-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://timtimtimchen.github.io/tags/pinecone/</loc>
-    <lastmod>2024-04-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://timtimtimchen.github.io/tags/video-retalking/</loc>
     <lastmod>2024-04-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -188,6 +174,20 @@
   
   <url>
     <loc>https://timtimtimchen.github.io/tags/RVC-BossGPT-SoVITS/</loc>
+    <lastmod>2024-04-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://timtimtimchen.github.io/tags/youtube/</loc>
+    <lastmod>2024-04-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://timtimtimchen.github.io/tags/pinecone/</loc>
     <lastmod>2024-04-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
