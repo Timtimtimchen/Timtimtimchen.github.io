@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>meta-spark</title>
+      <link href="/2024/04/04/meta-spark/"/>
+      <url>/2024/04/04/meta-spark/</url>
+      
+        <content type="html"><![CDATA[<h2 id="步驟"><a href="#步驟" class="headerlink" title="步驟"></a>步驟</h2><ol><li><p>準備工作</p><ol><li>安裝 MetaSpark Studio  <ul><li>前往 MetaSpark 官方網站: <a href="https://spark.meta.com/">https://spark.meta.com/</a> 下載 MetaSpark Studio。</li><li>依照安裝指示完成安裝。</li></ul></li><li>下載臉部模板  <ul><li>前往 MetaSpark 官方教學: <a href="https://spark.meta.com/learn/articles/fundamentals/templates/">https://spark.meta.com/learn/articles/fundamentals/templates/</a>。</li><li>下載需要的臉部模板。</li></ul></li><li>準備素材  <ul><li>準備好要使用的素材，例如圖片、GIF 動畫、3D 模型等。</li></ul></li></ol></li><li><p>製作特效</p><ol><li>建立專案  <ul><li>打開 MetaSpark Studio。</li><li>點擊 File &gt; New &gt; Project。</li><li>在 Project Name 欄位輸入專案名稱。</li><li>點擊 Create。</li></ul></li><li>加入 Face Tracker  <ul><li>在 Scene 檢視窗中，點擊 Hierarchy 面板的 Create 按鈕。</li><li>選擇 AR &gt; Face Tracker。</li><li>將 Face Tracker 拖曳到 Scene 檢視窗中。</li></ul></li><li>加入 Face Mesh  <ul><li>在 Scene 檢視窗中，點擊 Hierarchy 面板的 Create 按鈕。</li><li>選擇 Mesh &gt; Face Mesh。</li><li>將 Face Mesh 拖曳到 Scene 檢視窗中。</li></ul></li><li>加入 Plane  <ul><li>在 Scene 檢視窗中，點擊 Hierarchy 面板的 Create 按鈕。</li><li>選擇 3D Object &gt; Plane。</li><li>將 Plane 拖曳到 Scene 檢視窗中。</li></ul></li></ol></li><li><p>應用特效</p><ol><li>簡單的圖片特效  <ul><li>將圖片拖曳到 Plane 的 Material 屬性中的 Albedo 貼圖欄位。</li><li>調整 Plane 的大小和位置。</li><li>在 Material 檢視窗中，調整圖片的材質屬性，例如透明度、顏色等。</li></ul></li><li>動畫特效  <ul><li>將 GIF 動畫拖曳到 Plane 的 Material 屬性中的 Albedo 貼圖欄位。</li><li>在 Material 檢視窗中，點擊 Shader 屬性中的 Edit 按鈕。</li><li>在 Shader 編輯器中，找到 Main 函數。</li><li>在 Main 函數中添加以下程式碼：<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 播放動畫</span><br><span class="line">_MainTex.uv.y += Time.deltaTime * _AnimSpeed;</span><br></pre></td></tr></table></figure></li><li>將 _AnimSpeed 屬性設為動畫的播放速度。</li></ul></li><li>3D 模型特效  <ul><li>將 3D 模型匯入到 MetaSpark Studio。</li><li>將 3D 模型拖曳到 Scene 檢視窗中。</li><li>調整 3D 模型的大小和位置。</li><li>在 Material 檢視窗中，設定 3D 模型的材質屬性，例如顏色、紋理等。</li></ul></li></ol></li><li><p>發布特效</p><ol><li>上傳特效  <ul><li>在 Meta Studio 中登入您的 Facebook 帳號。</li><li>點擊 Create &gt; Spark AR Effect。</li><li>在 Effect Name 欄位輸入特效名稱。</li><li>在 Description 欄位輸入特效描述。</li><li>在 Categories 欄位選擇特效類別。</li><li>將 Spark AR 專案匯出為 .zip 檔案。</li><li>將 .zip 檔案上傳到 Meta Studio。</li></ul></li><li>填寫資訊  <ul><li>在 Effect Name 欄位輸入特效名稱。</li><li>在 Description 欄位輸入特效描述。</li><li>在 Tags 欄位輸入特效標籤。</li><li>在 Thumbnail 欄位上傳特效縮圖。</li></ul></li><li>提交審核  <ul><li>點擊 Submit for Review。</li><li>IG 團隊會在 24 小時內審核你的特效。</li></ul></li></ol></li></ol><h2 id="作品"><a href="#作品" class="headerlink" title="作品:"></a>作品:</h2><img src="/2024/04/04/meta-spark/image.png" class="" title="作品"><img src="/2024/04/04/meta-spark/image2.png" class="" title="QR">]]></content>
+      
+      
+      <categories>
+          
+          <category> AR </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> meta spark </tag>
+            
+            <tag> AR/VR </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>youtube-summary</title>
       <link href="/2024/04/04/youtube-summary/"/>
       <url>/2024/04/04/youtube-summary/</url>
