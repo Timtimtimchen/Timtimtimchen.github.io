@@ -1,3 +1,4 @@
+https://timtimtimchen.github.io/about/index.html
 https://timtimtimchen.github.io/2024/04/01/Flowise/
 https://timtimtimchen.github.io/2024/04/01/llama-index/
 https://timtimtimchen.github.io/2024/04/04/video-retalking-RVC-BossGPT-SoVITS/
@@ -6,7 +7,6 @@ https://timtimtimchen.github.io/categories/index.html
 https://timtimtimchen.github.io/2024/04/01/Qrant/
 https://timtimtimchen.github.io/projects/index.html
 https://timtimtimchen.github.io/certificate/index.html
-https://timtimtimchen.github.io/about/index.html
 https://timtimtimchen.github.io/archives/index.html
 https://timtimtimchen.github.io/
 https://timtimtimchen.github.io/tags/flowise/
