@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://timtimtimchen.github.io/about/index.html</loc>
+    <loc>https://timtimtimchen.github.io/2024/04/01/Qrant/</loc>
     
-    <lastmod>2024-04-04</lastmod>
+    <lastmod>2024-04-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,14 +13,32 @@
   <url>
     <loc>https://timtimtimchen.github.io/2024/04/01/llama-index/</loc>
     
-    <lastmod>2024-04-04</lastmod>
+    <lastmod>2024-04-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://timtimtimchen.github.io/2024/04/01/Qrant/</loc>
+    <loc>https://timtimtimchen.github.io/2024/04/14/anythingllm/</loc>
+    
+    <lastmod>2024-04-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://timtimtimchen.github.io/2024/04/01/Flowise/</loc>
+    
+    <lastmod>2024-04-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://timtimtimchen.github.io/about/index.html</loc>
     
     <lastmod>2024-04-04</lastmod>
     
@@ -41,15 +59,6 @@
     <loc>https://timtimtimchen.github.io/certificate/index.html</loc>
     
     <lastmod>2024-04-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://timtimtimchen.github.io/2024/04/01/Flowise/</loc>
-    
-    <lastmod>2024-04-03</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -132,6 +141,13 @@
   
   <url>
     <loc>https://timtimtimchen.github.io/tags/vector/</loc>
+    <lastmod>2024-04-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://timtimtimchen.github.io/tags/ai/</loc>
     <lastmod>2024-04-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
