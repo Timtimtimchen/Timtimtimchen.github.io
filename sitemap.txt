@@ -1,5 +1,3 @@
-https://timtimtimchen.github.io/timchat/index.html
-https://timtimtimchen.github.io/gg/index.html
 https://timtimtimchen.github.io/about/index.html
 https://timtimtimchen.github.io/2024/04/01/Qrant/
 https://timtimtimchen.github.io/2024/04/01/llama-index/
@@ -16,14 +14,14 @@ https://timtimtimchen.github.io/tags/flowise/
 https://timtimtimchen.github.io/tags/qrant/
 https://timtimtimchen.github.io/tags/embedding/
 https://timtimtimchen.github.io/tags/vector/
+https://timtimtimchen.github.io/tags/ai/
 https://timtimtimchen.github.io/tags/Azure-Openai/
 https://timtimtimchen.github.io/tags/RAG/
 https://timtimtimchen.github.io/tags/meta-spark/
 https://timtimtimchen.github.io/tags/AR-VR/
-https://timtimtimchen.github.io/tags/ai/
-https://timtimtimchen.github.io/tags/youtube/
-https://timtimtimchen.github.io/tags/pinecone/
 https://timtimtimchen.github.io/tags/video-retalking/
 https://timtimtimchen.github.io/tags/RVC-BossGPT-SoVITS/
+https://timtimtimchen.github.io/tags/youtube/
+https://timtimtimchen.github.io/tags/pinecone/
 https://timtimtimchen.github.io/categories/AI/
 https://timtimtimchen.github.io/categories/AR/

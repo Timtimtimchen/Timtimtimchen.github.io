@@ -2,24 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://timtimtimchen.github.io/timchat/index.html</loc>
-    
-    <lastmod>2024-04-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://timtimtimchen.github.io/gg/index.html</loc>
-    
-    <lastmod>2024-04-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://timtimtimchen.github.io/about/index.html</loc>
     
     <lastmod>2024-04-13</lastmod>
@@ -156,6 +138,13 @@
   </url>
   
   <url>
+    <loc>https://timtimtimchen.github.io/tags/ai/</loc>
+    <lastmod>2024-04-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://timtimtimchen.github.io/tags/Azure-Openai/</loc>
     <lastmod>2024-04-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -184,7 +173,14 @@
   </url>
   
   <url>
-    <loc>https://timtimtimchen.github.io/tags/ai/</loc>
+    <loc>https://timtimtimchen.github.io/tags/video-retalking/</loc>
+    <lastmod>2024-04-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://timtimtimchen.github.io/tags/RVC-BossGPT-SoVITS/</loc>
     <lastmod>2024-04-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -199,20 +195,6 @@
   
   <url>
     <loc>https://timtimtimchen.github.io/tags/pinecone/</loc>
-    <lastmod>2024-04-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://timtimtimchen.github.io/tags/video-retalking/</loc>
-    <lastmod>2024-04-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://timtimtimchen.github.io/tags/RVC-BossGPT-SoVITS/</loc>
     <lastmod>2024-04-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
