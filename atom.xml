@@ -6,7 +6,7 @@
   <link href="https://timtimtimchen.github.io/atom.xml" rel="self"/>
   
   <link href="https://timtimtimchen.github.io/"/>
-  <updated>2024-05-04T18:20:20.099Z</updated>
+  <updated>2024-05-11T16:32:03.401Z</updated>
   <id>https://timtimtimchen.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>DB-GPT</title>
+    <link href="https://timtimtimchen.github.io/2024/05/12/DB-GPT/"/>
+    <id>https://timtimtimchen.github.io/2024/05/12/DB-GPT/</id>
+    <published>2024-05-11T16:08:34.000Z</published>
+    <updated>2024-05-11T16:32:03.401Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="介紹"><a href="#介紹" class="headerlink" title="介紹"></a>介紹</h2><p>DB-GPT是一個開源的AI原生數據應用開發框架，具備AWEL（Agentic Workflow Expression Language）和Agents。目的在於構建大型模型領域的基礎設施，透過開發多模型管理（SMMF）、Text2SQL效果優化、RAG框架以及優化、Multi-Agents框架協作、AWEL（智能體工作流編排）等多種技術能力,使得更加方便</p><h2 id="部屬"><a href="#部屬" class="headerlink" title="部屬"></a>部屬</h2><figure class="highlight docker"><table><tr><td class="code"><pre><span class="line"><span class="comment">#在 D:\DB-GPT 拉取image</span></span><br><span class="line">docker pull eosphorosai/dbgpt:latest</span><br><span class="line"></span><br><span class="line">cd DB-GPT</span><br><span class="line">mkdir data\models and cd data\models</span><br><span class="line"></span><br><span class="line"><span class="comment"># embedding model</span></span><br><span class="line">git clone https://huggingface.co/GanymedeNil/text2vec-large-chinese</span><br><span class="line"></span><br><span class="line"><span class="comment">#沒有GPU版本</span></span><br><span class="line">$PROXY_API_KEY=<span class="string">&quot;&quot;</span></span><br><span class="line">$PROXY_SERVER_URL=<span class="string">&quot;https://api.openai.com/v1/chat/completions&quot;</span></span><br><span class="line">docker <span class="keyword">run</span><span class="language-bash">  -d -p 3306:3306 -p 5000:5000 -p 5670:5670 -e LOCAL_DB_HOST=127.0.0.1 -e LOCAL_DB_PASSWORD=aa123456 -e MYSQL_ROOT_PASSWORD=aa123456 -e LLM_MODEL=proxyllm -e PROXY_API_KEY=<span class="variable">$PROXY_API_KEY</span> -e PROXY_SERVER_URL=<span class="variable">$PROXY_SERVER_URL</span> -e LANGUAGE=zh -v .\data\models\text2vec-large-chinese:/app/models/text2vec-large-chinese --name dbgpt eosphorosai/dbgpt</span></span><br></pre></td></tr></table></figure><h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><h3 id="chat-mysql-測試"><a href="#chat-mysql-測試" class="headerlink" title="chat mysql 測試"></a>chat mysql 測試</h3><img src="/2024/05/12/DB-GPT/1.png" class="" title="ai"><img src="/2024/05/12/DB-GPT/2.png" class="" title="ai"><h3 id="新增與修改mysql數據"><a href="#新增與修改mysql數據" class="headerlink" title="新增與修改mysql數據"></a>新增與修改mysql數據</h3><img src="/2024/05/12/DB-GPT/3.png" class="" title="ai"><img src="/2024/05/12/DB-GPT/4.png" class="" title="ai"><h3 id="根據mysql資料做圖表分析"><a href="#根據mysql資料做圖表分析" class="headerlink" title="根據mysql資料做圖表分析"></a>根據mysql資料做圖表分析</h3><img src="/2024/05/12/DB-GPT/5.png" class="" title="ai"><p><em><strong>還會自動做join</strong></em></p><img src="/2024/05/12/DB-GPT/6.png" class="" title="ai"><h2 id="根據知識庫做問答與修改"><a href="#根據知識庫做問答與修改" class="headerlink" title="根據知識庫做問答與修改"></a>根據知識庫做問答與修改</h2><img src="/2024/05/12/DB-GPT/7.png" class="" title="ai"><img src="/2024/05/12/DB-GPT/8.png" class="" title="ai">]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;介紹&quot;&gt;&lt;a href=&quot;#介紹&quot; class=&quot;headerlink&quot; title=&quot;介紹&quot;&gt;&lt;/a&gt;介紹&lt;/h2&gt;&lt;p&gt;DB-GPT是一個開源的AI原生數據應用開發框架，具備AWEL（Agentic Workflow Expression Language）和</summary>
+      
+    
+    
+    
+    <category term="AI" scheme="https://timtimtimchen.github.io/categories/AI/"/>
+    
+    
+    <category term="AI" scheme="https://timtimtimchen.github.io/tags/AI/"/>
+    
+    <category term="SQL" scheme="https://timtimtimchen.github.io/tags/SQL/"/>
+    
+  </entry>
   
   <entry>
     <title>n8n</title>

@@ -1,3 +1,4 @@
+https://timtimtimchen.github.io/2024/05/12/DB-GPT/
 https://timtimtimchen.github.io/2024/04/01/llama-index/
 https://timtimtimchen.github.io/2024/04/14/anythingllm/
 https://timtimtimchen.github.io/2024/05/04/n8n/
@@ -12,6 +13,8 @@ https://timtimtimchen.github.io/2024/04/04/youtube-summary/
 https://timtimtimchen.github.io/categories/index.html
 https://timtimtimchen.github.io/archives/index.html
 https://timtimtimchen.github.io/
+https://timtimtimchen.github.io/tags/AI/
+https://timtimtimchen.github.io/tags/SQL/
 https://timtimtimchen.github.io/tags/flowise/
 https://timtimtimchen.github.io/tags/qrant/
 https://timtimtimchen.github.io/tags/embedding/
