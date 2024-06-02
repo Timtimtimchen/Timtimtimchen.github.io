@@ -4,7 +4,16 @@
   <url>
     <loc>https://timtimtimchen.github.io/2024/05/12/DB-GPT/</loc>
     
-    <lastmod>2024-05-11</lastmod>
+    <lastmod>2024-06-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://timtimtimchen.github.io/2024/05/04/n8n/</loc>
+    
+    <lastmod>2024-06-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -21,15 +30,6 @@
   
   <url>
     <loc>https://timtimtimchen.github.io/2024/04/14/anythingllm/</loc>
-    
-    <lastmod>2024-05-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://timtimtimchen.github.io/2024/05/04/n8n/</loc>
     
     <lastmod>2024-05-04</lastmod>
     
@@ -130,120 +130,120 @@
 
   <url>
     <loc>https://timtimtimchen.github.io/</loc>
-    <lastmod>2024-05-31</lastmod>
+    <lastmod>2024-06-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://timtimtimchen.github.io/tags/AI/</loc>
-    <lastmod>2024-05-31</lastmod>
+    <loc>https://timtimtimchen.github.io/tags/ai/</loc>
+    <lastmod>2024-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://timtimtimchen.github.io/tags/SQL/</loc>
-    <lastmod>2024-05-31</lastmod>
+    <lastmod>2024-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://timtimtimchen.github.io/tags/flowise/</loc>
-    <lastmod>2024-05-31</lastmod>
+    <lastmod>2024-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://timtimtimchen.github.io/tags/qrant/</loc>
-    <lastmod>2024-05-31</lastmod>
+    <lastmod>2024-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://timtimtimchen.github.io/tags/embedding/</loc>
-    <lastmod>2024-05-31</lastmod>
+    <lastmod>2024-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://timtimtimchen.github.io/tags/vector/</loc>
-    <lastmod>2024-05-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://timtimtimchen.github.io/tags/ai/</loc>
-    <lastmod>2024-05-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://timtimtimchen.github.io/tags/Azure-Openai/</loc>
-    <lastmod>2024-05-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://timtimtimchen.github.io/tags/RAG/</loc>
-    <lastmod>2024-05-31</lastmod>
+    <lastmod>2024-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://timtimtimchen.github.io/tags/meta-spark/</loc>
-    <lastmod>2024-05-31</lastmod>
+    <lastmod>2024-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://timtimtimchen.github.io/tags/AR-VR/</loc>
-    <lastmod>2024-05-31</lastmod>
+    <lastmod>2024-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://timtimtimchen.github.io/tags/workflow/</loc>
-    <lastmod>2024-05-31</lastmod>
+    <lastmod>2024-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://timtimtimchen.github.io/tags/video-retalking/</loc>
-    <lastmod>2024-05-31</lastmod>
+    <loc>https://timtimtimchen.github.io/tags/RPA/</loc>
+    <lastmod>2024-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://timtimtimchen.github.io/tags/RVC-BossGPT-SoVITS/</loc>
-    <lastmod>2024-05-31</lastmod>
+    <loc>https://timtimtimchen.github.io/tags/Azure-Openai/</loc>
+    <lastmod>2024-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://timtimtimchen.github.io/tags/RAG/</loc>
+    <lastmod>2024-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://timtimtimchen.github.io/tags/youtube/</loc>
-    <lastmod>2024-05-31</lastmod>
+    <lastmod>2024-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://timtimtimchen.github.io/tags/pinecone/</loc>
-    <lastmod>2024-05-31</lastmod>
+    <lastmod>2024-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://timtimtimchen.github.io/tags/video-retalking/</loc>
+    <lastmod>2024-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://timtimtimchen.github.io/tags/RVC-BossGPT-SoVITS/</loc>
+    <lastmod>2024-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -252,14 +252,14 @@
   
   <url>
     <loc>https://timtimtimchen.github.io/categories/AI/</loc>
-    <lastmod>2024-05-31</lastmod>
+    <lastmod>2024-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://timtimtimchen.github.io/categories/AR/</loc>
-    <lastmod>2024-05-31</lastmod>
+    <lastmod>2024-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

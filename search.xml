@@ -20,7 +20,7 @@
       
         <tags>
             
-            <tag> AI </tag>
+            <tag> ai </tag>
             
             <tag> SQL </tag>
             
@@ -31,7 +31,7 @@
     
     
     <entry>
-      <title>n8n</title>
+      <title>N8N(自動工作流程)</title>
       <link href="/2024/05/04/n8n/"/>
       <url>/2024/05/04/n8n/</url>
       
@@ -48,6 +48,8 @@
         <tags>
             
             <tag> workflow </tag>
+            
+            <tag> RPA </tag>
             
         </tags>
       
@@ -72,9 +74,9 @@
       
         <tags>
             
-            <tag> embedding </tag>
-            
             <tag> ai </tag>
+            
+            <tag> embedding </tag>
             
         </tags>
       
