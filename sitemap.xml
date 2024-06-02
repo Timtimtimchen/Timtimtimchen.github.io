@@ -151,6 +151,20 @@
   </url>
   
   <url>
+    <loc>https://timtimtimchen.github.io/tags/vector/</loc>
+    <lastmod>2024-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://timtimtimchen.github.io/tags/embedding/</loc>
+    <lastmod>2024-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://timtimtimchen.github.io/tags/flowise/</loc>
     <lastmod>2024-06-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -165,14 +179,14 @@
   </url>
   
   <url>
-    <loc>https://timtimtimchen.github.io/tags/embedding/</loc>
+    <loc>https://timtimtimchen.github.io/tags/Azure-Openai/</loc>
     <lastmod>2024-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://timtimtimchen.github.io/tags/vector/</loc>
+    <loc>https://timtimtimchen.github.io/tags/RAG/</loc>
     <lastmod>2024-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -207,14 +221,14 @@
   </url>
   
   <url>
-    <loc>https://timtimtimchen.github.io/tags/Azure-Openai/</loc>
+    <loc>https://timtimtimchen.github.io/tags/video-retalking/</loc>
     <lastmod>2024-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://timtimtimchen.github.io/tags/RAG/</loc>
+    <loc>https://timtimtimchen.github.io/tags/RVC-BossGPT-SoVITS/</loc>
     <lastmod>2024-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -229,20 +243,6 @@
   
   <url>
     <loc>https://timtimtimchen.github.io/tags/pinecone/</loc>
-    <lastmod>2024-06-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://timtimtimchen.github.io/tags/video-retalking/</loc>
-    <lastmod>2024-06-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://timtimtimchen.github.io/tags/RVC-BossGPT-SoVITS/</loc>
     <lastmod>2024-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
