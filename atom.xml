@@ -6,7 +6,7 @@
   <link href="https://timtimtimchen.github.io/atom.xml" rel="self"/>
   
   <link href="https://timtimtimchen.github.io/"/>
-  <updated>2024-10-24T18:45:30.423Z</updated>
+  <updated>2025-11-27T15:32:30.786Z</updated>
   <id>https://timtimtimchen.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RIASEC測驗(初版)</title>
+    <link href="https://timtimtimchen.github.io/2025/11/27/RIASEC%E6%B8%AC%E9%A9%97/"/>
+    <id>https://timtimtimchen.github.io/2025/11/27/RIASEC%E6%B8%AC%E9%A9%97/</id>
+    <published>2025-11-27T15:28:40.000Z</published>
+    <updated>2025-11-27T15:32:30.786Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://riasec-coral.vercel.app/"><strong>測驗網址</strong></a></p><p>API: AIzaSyA8cRNCT6jxsa-MvH-lsHwh6RqreBWJGpc</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://riasec-coral.vercel.app/&quot;&gt;&lt;strong&gt;測驗網址&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;API: AIzaSyA8cRNCT6jxsa-MvH-lsHwh6RqreBWJGpc&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>BlockChain(加密貨幣/NFT)</title>
@@ -300,11 +322,11 @@
     <category term="AI" scheme="https://timtimtimchen.github.io/categories/AI/"/>
     
     
+    <category term="embedding" scheme="https://timtimtimchen.github.io/tags/embedding/"/>
+    
     <category term="flowise" scheme="https://timtimtimchen.github.io/tags/flowise/"/>
     
     <category term="qrant" scheme="https://timtimtimchen.github.io/tags/qrant/"/>
-    
-    <category term="embedding" scheme="https://timtimtimchen.github.io/tags/embedding/"/>
     
   </entry>
   

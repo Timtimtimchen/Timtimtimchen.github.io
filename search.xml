@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>RIASEC測驗(初版)</title>
+      <link href="/2025/11/27/RIASEC%E6%B8%AC%E9%A9%97/"/>
+      <url>/2025/11/27/RIASEC%E6%B8%AC%E9%A9%97/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://riasec-coral.vercel.app/"><strong>測驗網址</strong></a></p><p>API: AIzaSyA8cRNCT6jxsa-MvH-lsHwh6RqreBWJGpc</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>BlockChain(加密貨幣/NFT)</title>
       <link href="/2024/10/25/blockchain/"/>
       <url>/2024/10/25/blockchain/</url>
@@ -278,11 +291,11 @@
       
         <tags>
             
+            <tag> embedding </tag>
+            
             <tag> flowise </tag>
             
             <tag> qrant </tag>
-            
-            <tag> embedding </tag>
             
         </tags>
       
