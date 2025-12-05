@@ -8,7 +8,7 @@
       <link href="/2025/11/27/RIASEC%E6%B8%AC%E9%A9%97/"/>
       <url>/2025/11/27/RIASEC%E6%B8%AC%E9%A9%97/</url>
       
-        <content type="html"><![CDATA[<p><a href="https://riasec-coral.vercel.app/"><strong>測驗網址</strong></a></p><p>API: AIzaSyA8cRNCT6jxsa-MvH-lsHwh6RqreBWJGpc</p>]]></content>
+        <content type="html"><![CDATA[<p><a href="https://riasec-coral.vercel.app/"><strong>測驗網址</strong></a></p><p class="api"><!--AIzaSyBsgCkcWSCATDcduBWbrX0oY7UMGN-XmSA--></p>]]></content>
       
       
       
@@ -291,11 +291,11 @@
       
         <tags>
             
-            <tag> embedding </tag>
-            
             <tag> flowise </tag>
             
             <tag> qrant </tag>
+            
+            <tag> embedding </tag>
             
         </tags>
       
