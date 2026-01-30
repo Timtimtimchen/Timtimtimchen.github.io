@@ -16,11 +16,11 @@ https://timtimtimchen.github.io/2024/04/04/youtube-summary/
 https://timtimtimchen.github.io/categories/index.html
 https://timtimtimchen.github.io/archives/index.html
 https://timtimtimchen.github.io/
+https://timtimtimchen.github.io/tags/ai/
+https://timtimtimchen.github.io/tags/SQL/
 https://timtimtimchen.github.io/tags/flowise/
 https://timtimtimchen.github.io/tags/qrant/
 https://timtimtimchen.github.io/tags/embedding/
-https://timtimtimchen.github.io/tags/ai/
-https://timtimtimchen.github.io/tags/SQL/
 https://timtimtimchen.github.io/tags/vector/
 https://timtimtimchen.github.io/tags/%E5%8D%80%E5%A1%8A%E9%8D%8A/
 https://timtimtimchen.github.io/tags/%E5%85%83%E5%AE%87%E5%AE%99/
