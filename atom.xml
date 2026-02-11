@@ -6,7 +6,7 @@
   <link href="https://timtimtimchen.github.io/atom.xml" rel="self"/>
   
   <link href="https://timtimtimchen.github.io/"/>
-  <updated>2025-12-05T09:47:48.767Z</updated>
+  <updated>2026-02-11T05:22:16.656Z</updated>
   <id>https://timtimtimchen.github.io/</id>
   
   <author>
@@ -17,27 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>RIASEC測驗(初版)</title>
-    <link href="https://timtimtimchen.github.io/2025/11/27/RIASEC%E6%B8%AC%E9%A9%97/"/>
-    <id>https://timtimtimchen.github.io/2025/11/27/RIASEC%E6%B8%AC%E9%A9%97/</id>
-    <published>2025-11-27T15:28:40.000Z</published>
-    <updated>2025-12-05T09:47:48.767Z</updated>
+    <title>Virtual_Threads</title>
+    <link href="https://timtimtimchen.github.io/2026/02/11/Virtual-Threads/"/>
+    <id>https://timtimtimchen.github.io/2026/02/11/Virtual-Threads/</id>
+    <published>2026-02-11T05:07:54.000Z</published>
+    <updated>2026-02-11T05:22:16.656Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://riasec-coral.vercel.app/"><strong>測驗網址</strong></a></p><!-- apiAgIgzgaSyBsgCkcWSCATDcduBWbrX0oY7UMGN-XmSA-->]]></content>
+    <content type="html"><![CDATA[<h1 id="Virtual-Threads-才是-Java-Web-的正解"><a href="#Virtual-Threads-才是-Java-Web-的正解" class="headerlink" title="Virtual Threads 才是 Java Web 的正解"></a>Virtual Threads 才是 Java Web 的正解</h1><p>坦白說，我一直覺得很多團隊<strong>不是系統撐不住</strong>，<br>而是<strong>工程複雜度先把人搞垮了</strong>。</p><p>最經典的例子就是：<br>👉 把原本運作良好的 Spring MVC，硬生生改成 WebFlux。</p><p>理由通常只有一句話：</p><blockquote><p>「Non-blocking，效能比較好。」</p></blockquote><p>但實際上呢？<br>效能沒有飛起來，Debug 卻直接下地獄。</p><p>直到 <strong>JDK 21 的 Virtual Threads 出現</strong></p><blockquote><p><strong>Java Web，終於回到一條「人類能走的路」。</strong></p></blockquote><hr><h2 id="Thread-為什麼一直是-Java-的痛？"><a href="#Thread-為什麼一直是-Java-的痛？" class="headerlink" title="Thread 為什麼一直是 Java 的痛？"></a>Thread 為什麼一直是 Java 的痛？</h2><p>先講一個最基本、但很多人其實沒真的想清楚的事：</p><blockquote><p><strong>Thread 是「誰在執行你的程式碼」</strong></p></blockquote><p>在傳統的 Java Web 架構裡：</p><ul><li>一個 HTTP request  </li><li>對應一條 Thread  </li><li>Thread 一路跑 Controller → Service → DB</li></ul><p>只要遇到 IO（資料庫、外部 API）：</p><p>👉 <strong>Thread 就會卡住等待</strong></p><p>這在過去是個大問題，因為：</p><ul><li>OS Thread 非常重</li><li>能開的數量有限</li><li>一卡住就等於浪費資源</li></ul><p>於是整個 Java 生態開始「扭曲」，<br>大家開始不寫人類能看懂的程式碼，只為了躲避 blocking。</p><hr><h2 id="二、WebFlux-在解什麼問題？"><a href="#二、WebFlux-在解什麼問題？" class="headerlink" title="二、WebFlux 在解什麼問題？"></a>二、WebFlux 在解什麼問題？</h2><p>WebFlux 的出發點其實很單純：</p><blockquote><p><strong>不要讓 Thread 等 IO</strong></p></blockquote><p>它的世界觀是：</p><ul><li>少量 Event Loop Thread  </li><li>所有 IO 都必須 non-blocking  </li><li>用 Mono &#x2F; Flux 串起整個流程</li></ul><p>理論上看起來很美：</p><ul><li>Thread 利用率高  </li><li>高併發沒問題</li></ul><p>但現實世界往往是：</p><ul><li>Stack trace 破碎  </li><li>Debug 極度痛苦  </li><li>一個 blocking call 就能炸整個系統</li></ul><blockquote><p><strong>大多數業務系統的瓶頸，根本不在 Thread</strong></p></blockquote><p>而是在：</p><ul><li>DB 本身就慢  </li><li>外部 API 不穩  </li><li>商業邏輯複雜</li></ul><p>結果常見的結局是：</p><ol><li>系統沒有明顯變快  </li><li>工程複雜度卻暴增  </li><li>團隊士氣一路下滑</li></ol><hr><h2 id="Virtual-Threads-改變了什麼？"><a href="#Virtual-Threads-改變了什麼？" class="headerlink" title="Virtual Threads 改變了什麼？"></a>Virtual Threads 改變了什麼？</h2><p>JDK 21 的 Virtual Threads，只做了一件事，<br>但這件事非常關鍵：</p><blockquote><p><strong>讓「同步寫法」也能具備「非同步的 scalability」</strong></p></blockquote><p>過去：</p><ul><li>Blocking &#x3D; 佔住一條 OS Thread  </li><li>Thread 一多，系統就撐不住</li></ul><p>現在：</p><ul><li>Blocking &#x3D; JVM 幫你掛 Virtual Thread  </li><li>OS Thread 去跑別的任務</li></ul><p>Virtual Thread 的特性很簡單：</p><ul><li>非常輕量  </li><li>由 JVM 管理，不是 OS  </li><li>IO 時自動 park &#x2F; unpark</li></ul><p>你寫的程式碼依然是同步的：</p><pre><code class="java">User user = userService.getUser(id);Order order = orderService.getOrder(user);return new Result(user, order);</code></pre>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://riasec-coral.vercel.app/&quot;&gt;&lt;strong&gt;測驗網址&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;!-- api
-AgIgzgaSyBsgCkcWSCA
-TDcduBWbrX0oY7UMGN-XmSA
---&gt;
-</summary>
+    <summary type="html">&lt;h1 id=&quot;Virtual-Threads-才是-Java-Web-的正解&quot;&gt;&lt;a href=&quot;#Virtual-Threads-才是-Java-Web-的正解&quot; class=&quot;headerlink&quot; title=&quot;Virtual Threads 才是 Java Web 的正</summary>
       
     
     
     
+    
+    <category term="Java" scheme="https://timtimtimchen.github.io/tags/Java/"/>
+    
+    <category term="Virtual Threads" scheme="https://timtimtimchen.github.io/tags/Virtual-Threads/"/>
+    
+    <category term="WebFlux" scheme="https://timtimtimchen.github.io/tags/WebFlux/"/>
+    
+    <category term="Spring Boot" scheme="https://timtimtimchen.github.io/tags/Spring-Boot/"/>
     
   </entry>
   

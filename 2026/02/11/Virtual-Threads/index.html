@@ -1,0 +1,150 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><meta name="theme-color" content="#2d4356"><meta name="baidu-site-verification"><title>Virtual_Threads | 考研戰士Tim</title><link rel="stylesheet" type="text/css" href="/css/style.css"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.png"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script><script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/1.2.0-beta.10/libs/oversea/index.js"></script><script>window.addEventListener('load', function() {
+  new CozeWebSDK.WebChatClient({
+    config: {
+      type: 'bot',
+      bot_id: '7600336673834188805',
+      isIframe: false,
+    },
+    auth: {
+      type: 'token',
+      token: 'pat_j9X00AidZby1KiO6lAAuljTyRX3K3NY2cboYFAJAZx04Qz0HKnowMFgkCs2wPyaD',
+      onRefreshToken: function() {
+        return new Promise(function(resolve) {
+          // 這裡回傳當前的 Token 即可解決 SDK 的強制要求
+          resolve('pat_j9X00AidZby1KiO6lAAuljTyRX3K3NY2cboYFAJAZx04Qz0HKnowMFgkCs2wPyaD');
+        });
+      }
+    },
+    userInfo: {
+      id: '崔美娜秀',
+      url: 'https://img.ltn.com.tw/Upload/ent/page/800/2018/03/04/phpq3GMjX.png',
+      nickname: '崔美娜秀',
+    },
+    ui: {
+      base: {
+        icon: 'https://www.very1.com.tw/images/home/line-fun%20(1).png',
+        layout: 'pc',
+        lang: 'zh-CN',
+        zIndex: 1000,
+      },
+      header: {
+        isShow: true,
+        isNeedClose: true,
+      },
+      asstBtn: {
+        isNeed: true,
+      },
+      footer: {
+        isShow: true,
+        expressionText: 'contact tim 0975491139',
+      },
+      chatBot: {
+        title: 'Tim_Asistant',
+        uploadable: true,
+        width: 350,
+      },
+    },
+  });
+});</script><meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="考研戰士Tim" type="application/atom+xml">
+</head><link rel="stylesheet" type="text/css" href="/plugins/highlight/atom-one-dark.min.css"><script type="text/javascript" src="/plugins/highlight/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();
+</script><script type="text/javascript" src="/js/ready.js" async></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"><body class="night"><div class="mobile-head" id="mobile-head"><div class="navbar-icon"><span></span><span></span><span></span></div><div class="navbar-title"><a href="/">TIM</a></div><div class="navbar-search"><!--= show a circle here--></div></div><div class="h-wrapper" id="menu"><nav class="h-head box"><div class="m-hdimg"><a class="hdimg img" href="/"><img class="nofancybox" src="/img/dog.jpg" width="128" height="128"></a><h1 class="ttl"><a href="/">考研戰士Tim</a></h1></div><p class="m-desc"><img width = 80px height = 80px src ='https://timtimtimtimtim.pythonanywhere.com/static/qr.png'/></p><div class="m-nav"><ul><li><span class="dot">●</span><a href="/categories/">專案</a></li><li><span class="dot">●</span><a href="/certificate/">證書</a></li><li><span class="dot">●</span><a href="/about/">關於</a></li><li><span class="dot">●</span><a href="/archives/">歷程</a></li><li><span class="dot">●</span><a href="/%E7%AD%86%E8%A8%98/">筆記</a></li><li class="m-sch"><form class="form" id="j-formsch" method="get"><input class="txt" type="text" id="local-search-input" name="q" value="搜索" onfocus="if(this.value=='搜索'){this.value='';}" onblur="if(this.value==''){this.value='搜索';}"><input type="text" style="display:none;"></form></li></ul><div id="local-search-result"></div></div></nav></div><div id="back2Top"><a class="fa fa-arrow-up" title="Back to top" href="#"></a></div><div class="box" id="container"><div class="l-wrapper"><div class="l-content box"><div class="l-post l-post-art"><article class="p-art"><div class="p-header box"><h1 class="p-title">Virtual_Threads</h1><div class="p-info"><span class="p-date"><i class="fa fa-calendar"></i><a href="/2026/02/11/Virtual-Threads/">2026-02-11</a></span><span class="p-view" id="busuanzi_container_page_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_page_pv"></span></span></div></div><div class="p-content"><h1 id="Virtual-Threads-才是-Java-Web-的正解"><a href="#Virtual-Threads-才是-Java-Web-的正解" class="headerlink" title="Virtual Threads 才是 Java Web 的正解"></a>Virtual Threads 才是 Java Web 的正解</h1><p>坦白說，我一直覺得很多團隊<strong>不是系統撐不住</strong>，<br>而是<strong>工程複雜度先把人搞垮了</strong>。</p>
+<p>最經典的例子就是：<br>👉 把原本運作良好的 Spring MVC，硬生生改成 WebFlux。</p>
+<p>理由通常只有一句話：</p>
+<blockquote>
+<p>「Non-blocking，效能比較好。」</p>
+</blockquote>
+<p>但實際上呢？<br>效能沒有飛起來，Debug 卻直接下地獄。</p>
+<p>直到 <strong>JDK 21 的 Virtual Threads 出現</strong></p>
+<blockquote>
+<p><strong>Java Web，終於回到一條「人類能走的路」。</strong></p>
+</blockquote>
+<hr>
+<h2 id="Thread-為什麼一直是-Java-的痛？"><a href="#Thread-為什麼一直是-Java-的痛？" class="headerlink" title="Thread 為什麼一直是 Java 的痛？"></a>Thread 為什麼一直是 Java 的痛？</h2><p>先講一個最基本、但很多人其實沒真的想清楚的事：</p>
+<blockquote>
+<p><strong>Thread 是「誰在執行你的程式碼」</strong></p>
+</blockquote>
+<p>在傳統的 Java Web 架構裡：</p>
+<ul>
+<li>一個 HTTP request  </li>
+<li>對應一條 Thread  </li>
+<li>Thread 一路跑 Controller → Service → DB</li>
+</ul>
+<p>只要遇到 IO（資料庫、外部 API）：</p>
+<p>👉 <strong>Thread 就會卡住等待</strong></p>
+<p>這在過去是個大問題，因為：</p>
+<ul>
+<li>OS Thread 非常重</li>
+<li>能開的數量有限</li>
+<li>一卡住就等於浪費資源</li>
+</ul>
+<p>於是整個 Java 生態開始「扭曲」，<br>大家開始不寫人類能看懂的程式碼，只為了躲避 blocking。</p>
+<hr>
+<h2 id="二、WebFlux-在解什麼問題？"><a href="#二、WebFlux-在解什麼問題？" class="headerlink" title="二、WebFlux 在解什麼問題？"></a>二、WebFlux 在解什麼問題？</h2><p>WebFlux 的出發點其實很單純：</p>
+<blockquote>
+<p><strong>不要讓 Thread 等 IO</strong></p>
+</blockquote>
+<p>它的世界觀是：</p>
+<ul>
+<li>少量 Event Loop Thread  </li>
+<li>所有 IO 都必須 non-blocking  </li>
+<li>用 Mono &#x2F; Flux 串起整個流程</li>
+</ul>
+<p>理論上看起來很美：</p>
+<ul>
+<li>Thread 利用率高  </li>
+<li>高併發沒問題</li>
+</ul>
+<p>但現實世界往往是：</p>
+<ul>
+<li>Stack trace 破碎  </li>
+<li>Debug 極度痛苦  </li>
+<li>一個 blocking call 就能炸整個系統</li>
+</ul>
+<blockquote>
+<p><strong>大多數業務系統的瓶頸，根本不在 Thread</strong></p>
+</blockquote>
+<p>而是在：</p>
+<ul>
+<li>DB 本身就慢  </li>
+<li>外部 API 不穩  </li>
+<li>商業邏輯複雜</li>
+</ul>
+<p>結果常見的結局是：</p>
+<ol>
+<li>系統沒有明顯變快  </li>
+<li>工程複雜度卻暴增  </li>
+<li>團隊士氣一路下滑</li>
+</ol>
+<hr>
+<h2 id="Virtual-Threads-改變了什麼？"><a href="#Virtual-Threads-改變了什麼？" class="headerlink" title="Virtual Threads 改變了什麼？"></a>Virtual Threads 改變了什麼？</h2><p>JDK 21 的 Virtual Threads，只做了一件事，<br>但這件事非常關鍵：</p>
+<blockquote>
+<p><strong>讓「同步寫法」也能具備「非同步的 scalability」</strong></p>
+</blockquote>
+<p>過去：</p>
+<ul>
+<li>Blocking &#x3D; 佔住一條 OS Thread  </li>
+<li>Thread 一多，系統就撐不住</li>
+</ul>
+<p>現在：</p>
+<ul>
+<li>Blocking &#x3D; JVM 幫你掛 Virtual Thread  </li>
+<li>OS Thread 去跑別的任務</li>
+</ul>
+<p>Virtual Thread 的特性很簡單：</p>
+<ul>
+<li>非常輕量  </li>
+<li>由 JVM 管理，不是 OS  </li>
+<li>IO 時自動 park &#x2F; unpark</li>
+</ul>
+<p>你寫的程式碼依然是同步的：</p>
+<pre><code class="java">User user = userService.getUser(id);
+Order order = orderService.getOrder(user);
+return new Result(user, order);
+</code></pre>
+</div><div class="p-copyright"><blockquote><div class="p-copyright-author"><span class="p-copyright-key">本文作者：</span><span class="p-copytight-value"><a href="mailto:litreily@163.com">TIM</a></span></div><div class="p-copyright-link"><span class="p-copyright-key">本文連接：</span><span class="p-copytight-value"><a href="/2026/02/11/Virtual-Threads/">https://Timtimtimchen.github.io/2026/02/11/Virtual-Threads/</a></span></div></blockquote></div></article><div class="p-info box"><span class="p-tags"><i class="fa fa-tags"></i><a href="/tags/Java/">Java</a><a href="/tags/Virtual-Threads/">Virtual Threads</a><a href="/tags/WebFlux/">WebFlux</a><a href="/tags/Spring-Boot/">Spring Boot</a></span></div><aside id="toc"><div class="toc-title">目录</div><nav><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Virtual-Threads-%E6%89%8D%E6%98%AF-Java-Web-%E7%9A%84%E6%AD%A3%E8%A7%A3"><span class="toc-number">1.</span> <span class="toc-text">Virtual Threads 才是 Java Web 的正解</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Thread-%E7%82%BA%E4%BB%80%E9%BA%BC%E4%B8%80%E7%9B%B4%E6%98%AF-Java-%E7%9A%84%E7%97%9B%EF%BC%9F"><span class="toc-number">1.1.</span> <span class="toc-text">Thread 為什麼一直是 Java 的痛？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81WebFlux-%E5%9C%A8%E8%A7%A3%E4%BB%80%E9%BA%BC%E5%95%8F%E9%A1%8C%EF%BC%9F"><span class="toc-number">1.2.</span> <span class="toc-text">二、WebFlux 在解什麼問題？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Virtual-Threads-%E6%94%B9%E8%AE%8A%E4%BA%86%E4%BB%80%E9%BA%BC%EF%BC%9F"><span class="toc-number">1.3.</span> <span class="toc-text">Virtual Threads 改變了什麼？</span></a></li></ol></li></ol></nav></aside></div><section class="p-ext"><div class="l-pager l-pager-dtl box"><a class="next" href="/2024/10/25/blockchain/">BlockChain(加密貨幣/NFT) &gt;</a></div></section><footer><p><strong>Tim's blog</strong> © 2016 - 2026 <a href="/." rel="nofollow">考研戰士Tim</a> | <img src="https://timtimtimtimtim.pythonanywhere.com/static/instagram.jpg" width="50px" height="50px"></p></footer></div></div></div><script type="text/javascript" src="/js/search.js"></script><script type="text/javascript" src="/js/top.js"></script><script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+    search_path = 'search.xml';
+}
+var path = '/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.1" async></script></body></html>
