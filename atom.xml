@@ -6,7 +6,7 @@
   <link href="https://timtimtimchen.github.io/atom.xml" rel="self"/>
   
   <link href="https://timtimtimchen.github.io/"/>
-  <updated>2026-02-11T05:22:16.656Z</updated>
+  <updated>2026-03-27T09:29:45.123Z</updated>
   <id>https://timtimtimchen.github.io/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>結合混幣器原理之去中心化匿名投票系統</title>
+    <link href="https://timtimtimchen.github.io/2026/03/27/%E7%B5%90%E5%90%88%E6%B7%B7%E5%B9%A3%E5%99%A8%E5%8E%9F%E7%90%86%E4%B9%8B%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96%E5%8C%BF%E5%90%8D%E6%8A%95%E7%A5%A8%E7%B3%BB%E7%B5%B1/"/>
+    <id>https://timtimtimchen.github.io/2026/03/27/%E7%B5%90%E5%90%88%E6%B7%B7%E5%B9%A3%E5%99%A8%E5%8E%9F%E7%90%86%E4%B9%8B%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96%E5%8C%BF%E5%90%8D%E6%8A%95%E7%A5%A8%E7%B3%BB%E7%B5%B1/</id>
+    <published>2026-03-27T08:57:46.000Z</published>
+    <updated>2026-03-27T09:29:45.123Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="DEMO"><a href="#DEMO" class="headerlink" title="DEMO"></a>DEMO</h2><p>部屬在測試鍊上 還在開發階段</p><blockquote><p><a href="https://block-chain-voting-iota.vercel.app/">https://block-chain-voting-iota.vercel.app/</a></p></blockquote><h2 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h2><p>先講講怎麼認識混幣器 當初為了賭老鮑一句古摸您 歐印槓桿拉滿做多 上台講完第一句 十秒插針爆倉 當晚直接睡不著 想著明天怎麼吃比較省 賠了那麼多次開始懷疑自己 是不是自己技術分析功力不夠 開始到處入群跟單 想著這些都是高手 再怎麼樣勝率也不會比我低 就是入群這個舉動 我認識了一個柬埔寨的幹部 聊著聊著 很突然的 就把黑U透過混幣器洗乾淨的流程了解一輪 開始有點感興趣 第一次意識到區塊鏈中「匿名性」與「可追蹤性」的矛盾關係</p><p><img src="/2026/03/27/結合混幣器原理之去中心化匿名投票系統/aa.png"  width="100" height="150"> 虧麻了 鮑威爾還錢!</p><h2 id="二、混幣器原理"><a href="#二、混幣器原理" class="headerlink" title="二、混幣器原理"></a>二、混幣器原理</h2><p>混幣器（Cryptocurrency Mixer）是一種用來提升交易匿名性的技術 核心目標是<strong>打破交易之間的可追蹤關聯性</strong></p><h3 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1. 基本概念"></a>1. 基本概念</h3><p>在區塊鏈中，每一筆交易都是公開透明的，例如：</p><blockquote><p>A → B（10 ETH )</p></blockquote><p>這種透明性雖然提升了信任，但也讓資金流向容易被追蹤。</p><p>混幣器的作用是將多個使用者的資金混合，並重新分配至不同地址，例如：</p><blockquote><p>A → Mixer → C</p></blockquote><blockquote><p>D → Mixer → B</p></blockquote><blockquote><p>E → Mixer → A</p></blockquote><p>使原本的資金來源與去向難以對應。</p><hr><h3 id="2-核心技術"><a href="#2-核心技術" class="headerlink" title="2. 核心技術"></a>2. 核心技術</h3><h4 id="1-CoinJoin"><a href="#1-CoinJoin" class="headerlink" title="(1) CoinJoin"></a>(1) CoinJoin</h4><ul><li>多人共同發起一筆交易</li><li>輸入與輸出混合在同一筆交易中</li><li>難以判斷對應關係</li></ul><h4 id="2-零知識證明（Zero-Knowledge-Proof-ZKP）"><a href="#2-零知識證明（Zero-Knowledge-Proof-ZKP）" class="headerlink" title="(2) 零知識證明（Zero-Knowledge Proof, ZKP）"></a>(2) 零知識證明（Zero-Knowledge Proof, ZKP）</h4><ul><li>驗證使用者具有某種權限</li><li>不揭露實際身份</li></ul><h4 id="3-Commitment-與-Nullifier"><a href="#3-Commitment-與-Nullifier" class="headerlink" title="(3) Commitment 與 Nullifier"></a>(3) Commitment 與 Nullifier</h4><ul><li>Commitment：用於隱藏使用者身份的承諾值</li><li>Nullifier：防止重複使用（避免雙花或重複投票）</li></ul><hr><h3 id="3-核心特性"><a href="#3-核心特性" class="headerlink" title="3. 核心特性"></a>3. 核心特性</h3><ul><li>匿名性（Anonymity）</li><li>不可追蹤性（Unlinkability）</li><li>去中心化（Decentralization）</li></ul><hr><h2 id="三、系統設計與開發步驟"><a href="#三、系統設計與開發步驟" class="headerlink" title="三、系統設計與開發步驟"></a>三、系統設計與開發步驟</h2><p>本研究將混幣器的匿名機制應用於投票系統，目標為實現：</p><ul><li>匿名投票</li><li>防止重複投票</li><li>投票結果可驗證</li></ul><hr><h3 id="1-系統架構"><a href="#1-系統架構" class="headerlink" title="1. 系統架構"></a>1. 系統架構</h3><p>系統主要包含以下角色：</p><ul><li>投票者（Voter）</li><li>智能合約（Smart Contract）</li><li>零知識驗證機制（ZKP Verifier）</li></ul><hr><h3 id="2-開發流程"><a href="#2-開發流程" class="headerlink" title="2. 開發流程"></a>2. 開發流程</h3><h4 id="Step-1：使用者註冊"><a href="#Step-1：使用者註冊" class="headerlink" title="Step 1：使用者註冊"></a>Step 1：使用者註冊</h4><p>使用者在本地端生成隱私資訊：</p><blockquote><p>secret&amp;nullifier</p></blockquote><p>並計算：</p><blockquote><p>commitment &#x3D; hash(secret, nullifier)</p></blockquote><p>將 commitment 提交至區塊鏈。</p><hr><h4 id="Step-2：匿名投票"><a href="#Step-2：匿名投票" class="headerlink" title="Step 2：匿名投票"></a>Step 2：匿名投票</h4><p>使用者提交：</p><ul><li>投票選項</li><li>零知識證明（證明其擁有合法的 commitment）</li></ul><p>此過程中不會暴露：</p><ul><li>使用者身份</li><li>錢包地址</li></ul><hr><h4 id="Step-3：防止重複投票"><a href="#Step-3：防止重複投票" class="headerlink" title="Step 3：防止重複投票"></a>Step 3：防止重複投票</h4><p>系統會驗證：</p><blockquote><p>nullifier hash</p></blockquote><p>若該 nullifier 已被使用，則拒絕投票。</p><hr><h4 id="Step-4：投票統計"><a href="#Step-4：投票統計" class="headerlink" title="Step 4：投票統計"></a>Step 4：投票統計</h4><p>所有投票結果記錄於區塊鏈中，由智能合約自動統計，具備：</p><ul><li>不可竄改性</li><li>公開可驗證性</li></ul><hr>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;DEMO&quot;&gt;&lt;a href=&quot;#DEMO&quot; class=&quot;headerlink&quot; title=&quot;DEMO&quot;&gt;&lt;/a&gt;DEMO&lt;/h2&gt;&lt;p&gt;部屬在測試鍊上 還在開發階段&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://block-chai</summary>
+      
+    
+    
+    
+    
+    <category term="Blockchain" scheme="https://timtimtimchen.github.io/tags/Blockchain/"/>
+    
+    <category term="Mixer" scheme="https://timtimtimchen.github.io/tags/Mixer/"/>
+    
+    <category term="ZKP" scheme="https://timtimtimchen.github.io/tags/ZKP/"/>
+    
+    <category term="Smart Contract" scheme="https://timtimtimchen.github.io/tags/Smart-Contract/"/>
+    
+    <category term="Ethereum" scheme="https://timtimtimchen.github.io/tags/Ethereum/"/>
+    
+    <category term="Web3" scheme="https://timtimtimchen.github.io/tags/Web3/"/>
+    
+  </entry>
   
   <entry>
     <title>Virtual_Threads</title>
@@ -49,9 +83,9 @@
     <link href="https://timtimtimchen.github.io/2024/10/25/blockchain/"/>
     <id>https://timtimtimchen.github.io/2024/10/25/blockchain/</id>
     <published>2024-10-24T16:44:52.000Z</published>
-    <updated>2024-10-24T18:45:30.423Z</updated>
+    <updated>2026-03-27T09:42:38.142Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="區塊鍊"><a href="#區塊鍊" class="headerlink" title="區塊鍊"></a>區塊鍊</h1><p>網路的普及,WEB3.0的到來是必然,也是一種趨勢,<br>區塊鍊的技術使人們不需要透過第三方媒介來託管資訊,每個人都可自行控制自己的資訊以及金錢 </p><p>舉個例子:<br>最近周杰倫演唱會鬧得沸沸揚揚,個人認為售票方沒有實名制是刻意的,目的是賺取炒價後的利潤,以上純屬推測<br>畢竟連我這白癡都知道黃牛一定不會放過這次機會,主辦方不是低能兒就是有其他計謀</p><h2 id="怎麼解決"><a href="#怎麼解決" class="headerlink" title="怎麼解決??"></a>怎麼解決??</h2><p>我的想法是直接在元宇宙裡唱(也可以來我房間唱</p><ol><li><p>NFT門票 + 動態價格： 在元宇宙中，演唱會門票可以做成NFT，每張票都是獨一無二的，並且能透過區塊鏈驗證真偽。為了防止黃牛炒票，可以設計一個動態價格系統，讓票價隨需求增長，但會有價格上限，不會無限上漲。票價上升的部分利潤可以由售票方和藝人分配，而不是讓黃牛賺走。</p></li><li><p>售票方從轉售中分利： 售票方可能故意不實名制，想要從炒票中賺取利潤。這個系統可以設計成每次轉售時，售票方和藝人都能合法分成，這樣可以透明地從需求中獲得收益，而不是讓黃牛私下炒作。</p></li><li><p>專屬的虛擬體驗： 為了讓粉絲更願意透過官方渠道購票，還可以提供一些只有官方NFT門票持有者才能享有的虛擬福利，比如「虛擬簽名會」或「元宇宙獨家後台探訪」等特權。這樣，即使黃牛把票賣給別人，買票者也無法享受這些獨家福利，降低黃牛票的吸引力。</p></li><li><p>透明的二次轉售機制： 每張NFT門票的交易歷史、價格變動等都會公開記錄在區塊鏈上，粉絲可以看到每張票的交易次數和價格變化，這樣大家就可以自己判斷是否要買黃牛票，不會被騙。</p></li></ol><h1 id="加密貨幣-比特幣-以太幣"><a href="#加密貨幣-比特幣-以太幣" class="headerlink" title="加密貨幣(比特幣&#x2F;以太幣)"></a>加密貨幣(比特幣&#x2F;以太幣)</h1><p>只要有關資產,個人習慣把底層架構了解一輪,畢竟懂得多才不怕被騙,接觸加密貨幣一段時間,發現走勢不像股票有機可循,但停損點設好,獲利機率還是很高,雖然加密貨幣是<strong>去中心化</strong>,但交易所就不是了,因此要避免被駭風險,建議還是買個<strong>冷錢包</strong></p><img src="/2024/10/25/blockchain/1.jpg"  width="296" height="400"> <h1 id="NFT"><a href="#NFT" class="headerlink" title="NFT"></a>NFT</h1><p>懶得寫,  gas fee超貴<br><img src="/2024/10/25/blockchain/a.jpg"  width="296" height="ˇ300"> &lt;&lt;  My NFT</p><h1 id="結論"><a href="#結論" class="headerlink" title="結論:"></a>結論:</h1><p>科技推陳出新,越早了解就越早發現商機,比特幣就是個例子,大部份比特幣都在固定人手裡,不是他們很厲害,是他們有第一手消息,也願意去學習,目前元宇宙還沒完全成熟,但有搞頭,我很看好,看哪裡能賺錢再上來更新</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="區塊鍊"><a href="#區塊鍊" class="headerlink" title="區塊鍊"></a>區塊鍊</h1><p>網路的普及,WEB3.0的到來是必然,也是一種趨勢,<br>區塊鍊的技術使人們不需要透過第三方媒介來託管資訊,每個人都可自行控制自己的資訊以及金錢 </p><h1 id="加密貨幣-比特幣-以太幣"><a href="#加密貨幣-比特幣-以太幣" class="headerlink" title="加密貨幣(比特幣&#x2F;以太幣)"></a>加密貨幣(比特幣&#x2F;以太幣)</h1><p>雖然加密貨幣是<strong>去中心化</strong>,但交易所就不是了,因此要避免被駭風險,建議還是買個<strong>冷錢包</strong></p><img src="/2024/10/25/blockchain/1.jpg"  width="296" height="400"> <h1 id="NFT"><a href="#NFT" class="headerlink" title="NFT"></a>NFT</h1><p>懶得寫,  gas fee超貴<br><img src="/2024/10/25/blockchain/a.jpg"  width="296" height="ˇ300"> &lt;&lt;  My NFT</p><h1 id="結論"><a href="#結論" class="headerlink" title="結論:"></a>結論:</h1><p>科技推陳出新,越早了解就越早發現商機,比特幣就是個例子,大部份比特幣都在固定人手裡,不是他們很厲害,是他們有第一手消息,也願意去學習,目前元宇宙還沒完全成熟,但有搞頭,我很看好,看哪裡能賺錢再上來更新</p>]]></content>
     
     
       
