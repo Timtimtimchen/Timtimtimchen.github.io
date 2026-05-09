@@ -6,7 +6,7 @@
   <link href="https://timtimtimchen.github.io/atom.xml" rel="self"/>
   
   <link href="https://timtimtimchen.github.io/"/>
-  <updated>2026-03-29T06:11:26.161Z</updated>
+  <updated>2026-05-09T19:12:52.839Z</updated>
   <id>https://timtimtimchen.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>自製 NCUE 區塊鏈（Private Ethereum Chain）</title>
+    <link href="https://timtimtimchen.github.io/2026/05/10/%E8%87%AA%E8%A3%BDNCUE%E5%8D%80%E5%A1%8A%E9%8F%88/"/>
+    <id>https://timtimtimchen.github.io/2026/05/10/%E8%87%AA%E8%A3%BDNCUE%E5%8D%80%E5%A1%8A%E9%8F%88/</id>
+    <published>2026-05-09T18:35:02.000Z</published>
+    <updated>2026-05-09T19:12:52.839Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近咪停跟教授聊到自己開發遇到的問題 就是把smart contract部在鏈上gas fee太昂貴 意外的是教授竟然一語道破 叫我自己做一條 剛好我也想了解底層架構 看看有沒有漏洞能鑽 說不定能撈一筆 所以決定建立一條自己的私有鏈 命名為 <strong>NCUE Chain</strong> 透過這個實作，可以更理解 Ethereum 區塊鏈的核心運作方式，例如：</p><ul><li>創世區塊（Genesis Block）</li><li>節點啟動（Node Startup）</li><li>鏈初始化（Chain Initialization）</li><li>RPC 通訊</li><li>錢包連線（MetaMask）</li></ul><p>本篇將完整紀錄從零建立一條私有鏈的過程</p><hr><h1 id="開發環境"><a href="#開發環境" class="headerlink" title="開發環境"></a>開發環境</h1><p>本次使用環境：</p><table><thead><tr><th>項目</th><th>版本</th></tr></thead><tbody><tr><td>作業系統</td><td>Ubuntu</td></tr><tr><td>區塊鏈客戶端</td><td>Geth</td></tr><tr><td>錢包工具</td><td>MetaMask</td></tr></tbody></table><hr><h1 id="安裝-Geth"><a href="#安裝-Geth" class="headerlink" title="安裝 Geth"></a>安裝 Geth</h1><p>首先安裝 Ethereum 官方客戶端</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo add-apt-repository ppa:ethereum/ethereum</span><br><span class="line">sudo apt update</span><br><span class="line">sudo apt install geth</span><br></pre></td></tr></table></figure><p>安裝完成後確認版本：</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">geth version</span><br></pre></td></tr></table></figure><p>若成功看到版本資訊，代表安裝成功。</p><hr><h1 id="建立專案資料夾"><a href="#建立專案資料夾" class="headerlink" title="建立專案資料夾"></a>建立專案資料夾</h1><p>建立自己的區塊鏈專案目錄：</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> ncue-chain</span><br><span class="line"><span class="built_in">cd</span> ncue-chain</span><br></pre></td></tr></table></figure><p>整體結構如下：</p><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">ncue-chain/</span><br><span class="line">├── ncue_genesis.json</span><br><span class="line">└── ncue_data/</span><br></pre></td></tr></table></figure><hr><h1 id="建立創世區塊（Genesis-Block）"><a href="#建立創世區塊（Genesis-Block）" class="headerlink" title="建立創世區塊（Genesis Block）"></a>建立創世區塊（Genesis Block）</h1><p>創世區塊是整條鏈的起點。</p><p>建立：</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nano ncue_genesis.json</span><br></pre></td></tr></table></figure><p>寫入以下內容：</p><figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;config&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;chainId&quot;</span><span class="punctuation">:</span> <span class="number">1921</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;homesteadBlock&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;eip150Block&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;eip155Block&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;eip158Block&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;byzantiumBlock&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;constantinopleBlock&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;petersburgBlock&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;istanbulBlock&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;berlinBlock&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;londonBlock&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;terminalTotalDifficulty&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;ethash&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span><span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;difficulty&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0x1&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;gasLimit&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0x8000000&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;alloc&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;0x你的錢包地址&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;balance&quot;</span><span class="punctuation">:</span> <span class="string">&quot;1000000000000000000000&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure><hr><h1 id="Genesis-設定說明"><a href="#Genesis-設定說明" class="headerlink" title="Genesis 設定說明"></a>Genesis 設定說明</h1><h2 id="chainId"><a href="#chainId" class="headerlink" title="chainId"></a>chainId</h2><figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="attr">&quot;chainId&quot;</span><span class="punctuation">:</span> <span class="number">1921</span></span><br></pre></td></tr></table></figure><p>區塊鏈唯一識別碼。</p><p>避免和 Ethereum 主網衝突。</p><hr><h2 id="difficulty"><a href="#difficulty" class="headerlink" title="difficulty"></a>difficulty</h2><figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="attr">&quot;difficulty&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0x1&quot;</span></span><br></pre></td></tr></table></figure><p>挖礦難度。</p><p>設定越低，出塊越快。</p><hr><h2 id="gasLimit"><a href="#gasLimit" class="headerlink" title="gasLimit"></a>gasLimit</h2><figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="attr">&quot;gasLimit&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0x8000000&quot;</span></span><br></pre></td></tr></table></figure><p>每個區塊最大 Gas 上限。</p><hr><h2 id="alloc"><a href="#alloc" class="headerlink" title="alloc"></a>alloc</h2><p>預先分配資產。</p><figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;alloc&quot;</span></span><br></pre></td></tr></table></figure><p>可直接給指定帳戶初始代幣。</p><hr><h1 id="初始化區塊鏈"><a href="#初始化區塊鏈" class="headerlink" title="初始化區塊鏈"></a>初始化區塊鏈</h1><p>建立資料存放目錄：</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> ncue_data</span><br></pre></td></tr></table></figure><p>初始化：</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">geth --datadir ncue_data init ncue_genesis.json</span><br></pre></td></tr></table></figure><p>成功會看到：</p><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Successfully wrote genesis state</span><br></pre></td></tr></table></figure><p>代表初始化完成。</p><hr><h1 id="啟動-NCUE-節點"><a href="#啟動-NCUE-節點" class="headerlink" title="啟動 NCUE 節點"></a>啟動 NCUE 節點</h1><p>執行：</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">geth \</span><br><span class="line">--datadir ncue_data \</span><br><span class="line">--networkid 1921 \</span><br><span class="line">--http \</span><br><span class="line">--http.addr 0.0.0.0 \</span><br><span class="line">--http.port 8545 \</span><br><span class="line">--http.api eth,net,web3,debug,admin,personal \</span><br><span class="line">--http.corsdomain <span class="string">&quot;*&quot;</span> \</span><br><span class="line">--http.vhosts <span class="string">&quot;*&quot;</span></span><br></pre></td></tr></table></figure><p>參數說明：</p><table><thead><tr><th>參數</th><th>功能</th></tr></thead><tbody><tr><td>–datadir</td><td>區塊資料位置</td></tr><tr><td>–networkid</td><td>網路 ID</td></tr><tr><td>–http</td><td>開啟 RPC</td></tr><tr><td>–http.port</td><td>RPC Port</td></tr><tr><td>–http.api</td><td>開放 API</td></tr></tbody></table><hr><h1 id="MetaMask-連線設定"><a href="#MetaMask-連線設定" class="headerlink" title="MetaMask 連線設定"></a>MetaMask 連線設定</h1><p>打開錢包 </p><p>新增自訂網路：</p><h2 id="網路名稱"><a href="#網路名稱" class="headerlink" title="網路名稱"></a>網路名稱</h2><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">NCUE Chain</span><br></pre></td></tr></table></figure><h2 id="RPC-URL"><a href="#RPC-URL" class="headerlink" title="RPC URL"></a>RPC URL</h2><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">http://這裡要改成你虛擬機的IP位置:8545</span><br></pre></td></tr></table></figure><h2 id="鏈-ID"><a href="#鏈-ID" class="headerlink" title="鏈 ID"></a>鏈 ID</h2><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">1921</span><br></pre></td></tr></table></figure><h2 id="貨幣符號"><a href="#貨幣符號" class="headerlink" title="貨幣符號"></a>貨幣符號</h2><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">NCUE</span><br></pre></td></tr></table></figure><hr><h1 id="成果展示"><a href="#成果展示" class="headerlink" title="成果展示"></a>成果展示</h1><img src="/2026/05/10/自製NCUE區塊鏈/AAAA.png"  width="250" height="350"><p>成功建立自己的區塊鏈：</p><p>✅ 自定義鏈<br>✅ 自定義幣種<br>✅ 可連接 MetaMask</p><hr>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;最近咪停跟教授聊到自己開發遇到的問題 就是把smart contract部在鏈上gas fee太昂貴 意外的是教授竟然一語道破 叫我自己做一條 剛好我也想了解底層架構 看看有沒有漏洞能鑽 說不定能撈一筆 所以決定建立一條自己的私有鏈 命名為 &lt;strong&gt;NCUE Cha</summary>
+      
+    
+    
+    
+    
+    <category term="Blockchain" scheme="https://timtimtimchen.github.io/tags/Blockchain/"/>
+    
+    <category term="Ethereum" scheme="https://timtimtimchen.github.io/tags/Ethereum/"/>
+    
+    <category term="Geth" scheme="https://timtimtimchen.github.io/tags/Geth/"/>
+    
+    <category term="MetaMask" scheme="https://timtimtimchen.github.io/tags/MetaMask/"/>
+    
+  </entry>
   
   <entry>
     <title>結合 Alchemy Webhook 與 Telegram Bot：川普之子錢包監控系統</title>
@@ -34,11 +62,11 @@
     
     
     
-    <category term="Python" scheme="https://timtimtimchen.github.io/tags/Python/"/>
-    
     <category term="Blockchain" scheme="https://timtimtimchen.github.io/tags/Blockchain/"/>
     
     <category term="Web3" scheme="https://timtimtimchen.github.io/tags/Web3/"/>
+    
+    <category term="Python" scheme="https://timtimtimchen.github.io/tags/Python/"/>
     
     <category term="TelegramBot" scheme="https://timtimtimchen.github.io/tags/TelegramBot/"/>
     
@@ -47,11 +75,11 @@
   </entry>
   
   <entry>
-    <title>結合混幣器原理之區塊鍊匿名投票系統</title>
+    <title>結合混幣器原理之區塊鏈匿名投票系統</title>
     <link href="https://timtimtimchen.github.io/2026/03/27/%E7%B5%90%E5%90%88%E6%B7%B7%E5%B9%A3%E5%99%A8%E5%8E%9F%E7%90%86%E4%B9%8B%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96%E5%8C%BF%E5%90%8D%E6%8A%95%E7%A5%A8%E7%B3%BB%E7%B5%B1/"/>
     <id>https://timtimtimchen.github.io/2026/03/27/%E7%B5%90%E5%90%88%E6%B7%B7%E5%B9%A3%E5%99%A8%E5%8E%9F%E7%90%86%E4%B9%8B%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96%E5%8C%BF%E5%90%8D%E6%8A%95%E7%A5%A8%E7%B3%BB%E7%B5%B1/</id>
     <published>2026-03-27T08:57:46.000Z</published>
-    <updated>2026-03-29T06:13:22.020Z</updated>
+    <updated>2026-05-09T19:17:17.601Z</updated>
     
     <content type="html"><![CDATA[<h2 id="DEMO"><a href="#DEMO" class="headerlink" title="DEMO"></a>DEMO</h2><p>部屬在測試鍊上 還在開發階段</p><blockquote><p><a href="https://block-chain-voting-iota.vercel.app/">https://block-chain-voting-iota.vercel.app/</a></p></blockquote><h2 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h2><p>先講講怎麼認識混幣器 當初為了賭老鮑一句古摸您 歐印槓桿拉滿做多 上台講完第一句 十秒插針爆倉 當晚直接睡不著 想著明天怎麼吃比較省 賠了那麼多次開始懷疑自己 是不是自己技術分析功力不夠 開始到處入群跟單 想著這些都是高手 再怎麼樣勝率也不會比我低 就是入群這個舉動 我認識了一個柬埔寨的幹部 聊著聊著 很突然的 就把黑U透過混幣器洗乾淨的流程了解一輪 開始有點感興趣 第一次意識到區塊鏈中「匿名性」與「可追蹤性」的矛盾關係</p><p><img src="/2026/03/27/結合混幣器原理之去中心化匿名投票系統/aa.png"  width="250" height="350"> 虧麻了 鮑威爾還錢!</p><h2 id="二、混幣器原理"><a href="#二、混幣器原理" class="headerlink" title="二、混幣器原理"></a>二、混幣器原理</h2><p>混幣器（Cryptocurrency Mixer）是一種用來提升交易匿名性的技術 核心目標是<strong>打破交易之間的可追蹤關聯性</strong></p><h3 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1. 基本概念"></a>1. 基本概念</h3><p>在區塊鏈中，每一筆交易都是公開透明的，例如：</p><blockquote><p>A → B（10 ETH )</p></blockquote><p>這種透明性雖然提升了信任，但也讓資金流向容易被追蹤。</p><p>混幣器的作用是將多個使用者的資金混合，並重新分配至不同地址，例如：</p><blockquote><p>A → Mixer → C</p></blockquote><blockquote><p>D → Mixer → B</p></blockquote><blockquote><p>E → Mixer → A</p></blockquote><p>使原本的資金來源與去向難以對應。</p><hr><h3 id="2-核心技術"><a href="#2-核心技術" class="headerlink" title="2. 核心技術"></a>2. 核心技術</h3><h4 id="1-CoinJoin"><a href="#1-CoinJoin" class="headerlink" title="(1) CoinJoin"></a>(1) CoinJoin</h4><ul><li>多人共同發起一筆交易</li><li>輸入與輸出混合在同一筆交易中</li><li>難以判斷對應關係</li></ul><h4 id="2-零知識證明（Zero-Knowledge-Proof-ZKP）"><a href="#2-零知識證明（Zero-Knowledge-Proof-ZKP）" class="headerlink" title="(2) 零知識證明（Zero-Knowledge Proof, ZKP）"></a>(2) 零知識證明（Zero-Knowledge Proof, ZKP）</h4><ul><li>驗證使用者具有某種權限</li><li>不揭露實際身份</li></ul><h4 id="3-Commitment-與-Nullifier"><a href="#3-Commitment-與-Nullifier" class="headerlink" title="(3) Commitment 與 Nullifier"></a>(3) Commitment 與 Nullifier</h4><ul><li>Commitment：用於隱藏使用者身份的承諾值</li><li>Nullifier：防止重複使用（避免雙花或重複投票）</li></ul><hr><h3 id="3-核心特性"><a href="#3-核心特性" class="headerlink" title="3. 核心特性"></a>3. 核心特性</h3><ul><li>匿名性（Anonymity）</li><li>不可追蹤性（Unlinkability）</li><li>去中心化（Decentralization）</li></ul><hr><h2 id="三、系統設計與開發步驟"><a href="#三、系統設計與開發步驟" class="headerlink" title="三、系統設計與開發步驟"></a>三、系統設計與開發步驟</h2><p>本研究將混幣器的匿名機制應用於投票系統，目標為實現：</p><ul><li>匿名投票</li><li>防止重複投票</li><li>投票結果可驗證</li></ul><hr><h3 id="1-系統架構"><a href="#1-系統架構" class="headerlink" title="1. 系統架構"></a>1. 系統架構</h3><p>系統主要包含以下角色：</p><ul><li>投票者（Voter）</li><li>智能合約（Smart Contract）</li><li>零知識驗證機制（ZKP Verifier）</li></ul><hr><h3 id="2-開發流程"><a href="#2-開發流程" class="headerlink" title="2. 開發流程"></a>2. 開發流程</h3><h4 id="Step-1：使用者註冊"><a href="#Step-1：使用者註冊" class="headerlink" title="Step 1：使用者註冊"></a>Step 1：使用者註冊</h4><p>使用者在本地端生成隱私資訊：</p><blockquote><p>secret&amp;nullifier</p></blockquote><p>並計算：</p><blockquote><p>commitment &#x3D; hash(secret, nullifier)</p></blockquote><p>將 commitment 提交至區塊鏈。</p><hr><h4 id="Step-2：匿名投票"><a href="#Step-2：匿名投票" class="headerlink" title="Step 2：匿名投票"></a>Step 2：匿名投票</h4><p>使用者提交：</p><ul><li>投票選項</li><li>零知識證明（證明其擁有合法的 commitment）</li></ul><p>此過程中不會暴露：</p><ul><li>使用者身份</li><li>錢包地址</li></ul><hr><h4 id="Step-3：防止重複投票"><a href="#Step-3：防止重複投票" class="headerlink" title="Step 3：防止重複投票"></a>Step 3：防止重複投票</h4><p>系統會驗證：</p><blockquote><p>nullifier hash</p></blockquote><p>若該 nullifier 已被使用，則拒絕投票。</p><hr><h4 id="Step-4：投票統計"><a href="#Step-4：投票統計" class="headerlink" title="Step 4：投票統計"></a>Step 4：投票統計</h4><p>所有投票結果記錄於區塊鏈中，由智能合約自動統計，具備：</p><ul><li>不可竄改性</li><li>公開可驗證性</li></ul><hr>]]></content>
     
@@ -68,8 +96,6 @@
     
     <category term="Blockchain" scheme="https://timtimtimchen.github.io/tags/Blockchain/"/>
     
-    <category term="Web3" scheme="https://timtimtimchen.github.io/tags/Web3/"/>
-    
     <category term="Mixer" scheme="https://timtimtimchen.github.io/tags/Mixer/"/>
     
     <category term="ZKP" scheme="https://timtimtimchen.github.io/tags/ZKP/"/>
@@ -77,6 +103,8 @@
     <category term="Smart Contract" scheme="https://timtimtimchen.github.io/tags/Smart-Contract/"/>
     
     <category term="Ethereum" scheme="https://timtimtimchen.github.io/tags/Ethereum/"/>
+    
+    <category term="Web3" scheme="https://timtimtimchen.github.io/tags/Web3/"/>
     
   </entry>
   
@@ -113,14 +141,14 @@
     <link href="https://timtimtimchen.github.io/2024/10/25/blockchain/"/>
     <id>https://timtimtimchen.github.io/2024/10/25/blockchain/</id>
     <published>2024-10-24T16:44:52.000Z</published>
-    <updated>2026-03-27T09:42:38.142Z</updated>
+    <updated>2026-05-09T19:16:43.829Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="區塊鍊"><a href="#區塊鍊" class="headerlink" title="區塊鍊"></a>區塊鍊</h1><p>網路的普及,WEB3.0的到來是必然,也是一種趨勢,<br>區塊鍊的技術使人們不需要透過第三方媒介來託管資訊,每個人都可自行控制自己的資訊以及金錢 </p><h1 id="加密貨幣-比特幣-以太幣"><a href="#加密貨幣-比特幣-以太幣" class="headerlink" title="加密貨幣(比特幣&#x2F;以太幣)"></a>加密貨幣(比特幣&#x2F;以太幣)</h1><p>雖然加密貨幣是<strong>去中心化</strong>,但交易所就不是了,因此要避免被駭風險,建議還是買個<strong>冷錢包</strong></p><img src="/2024/10/25/blockchain/1.jpg"  width="296" height="400"> <h1 id="NFT"><a href="#NFT" class="headerlink" title="NFT"></a>NFT</h1><p>懶得寫,  gas fee超貴<br><img src="/2024/10/25/blockchain/a.jpg"  width="296" height="ˇ300"> &lt;&lt;  My NFT</p><h1 id="結論"><a href="#結論" class="headerlink" title="結論:"></a>結論:</h1><p>科技推陳出新,越早了解就越早發現商機,比特幣就是個例子,大部份比特幣都在固定人手裡,不是他們很厲害,是他們有第一手消息,也願意去學習,目前元宇宙還沒完全成熟,但有搞頭,我很看好,看哪裡能賺錢再上來更新</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="區塊鏈"><a href="#區塊鏈" class="headerlink" title="區塊鏈"></a>區塊鏈</h1><p>網路的普及,WEB3.0的到來是必然,也是一種趨勢,<br>區塊鍊的技術使人們不需要透過第三方媒介來託管資訊,每個人都可自行控制自己的資訊以及金錢 </p><h1 id="加密貨幣-比特幣-以太幣"><a href="#加密貨幣-比特幣-以太幣" class="headerlink" title="加密貨幣(比特幣&#x2F;以太幣)"></a>加密貨幣(比特幣&#x2F;以太幣)</h1><p>雖然加密貨幣是<strong>去中心化</strong>,但交易所就不是了,因此要避免被駭風險,建議還是買個<strong>冷錢包</strong></p><img src="/2024/10/25/blockchain/1.jpg"  width="296" height="400"> <h1 id="NFT"><a href="#NFT" class="headerlink" title="NFT"></a>NFT</h1><p>懶得寫,  gas fee超貴<br><img src="/2024/10/25/blockchain/a.jpg"  width="296" height="ˇ300"> &lt;&lt;  My NFT</p><h1 id="結論"><a href="#結論" class="headerlink" title="結論:"></a>結論:</h1><p>科技推陳出新,越早了解就越早發現商機,比特幣就是個例子,大部份比特幣都在固定人手裡,不是他們很厲害,是他們有第一手消息,也願意去學習,目前元宇宙還沒完全成熟,但有搞頭,我很看好,看哪裡能賺錢再上來更新</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;區塊鍊&quot;&gt;&lt;a href=&quot;#區塊鍊&quot; class=&quot;headerlink&quot; title=&quot;區塊鍊&quot;&gt;&lt;/a&gt;區塊鍊&lt;/h1&gt;&lt;p&gt;網路的普及,WEB3.0的到來是必然,也是一種趨勢,&lt;br&gt;區塊鍊的技術使人們不需要透過第三方媒介來託管資訊,每個人都可自行控制自己</summary>
+    <summary type="html">&lt;h1 id=&quot;區塊鏈&quot;&gt;&lt;a href=&quot;#區塊鏈&quot; class=&quot;headerlink&quot; title=&quot;區塊鏈&quot;&gt;&lt;/a&gt;區塊鏈&lt;/h1&gt;&lt;p&gt;網路的普及,WEB3.0的到來是必然,也是一種趨勢,&lt;br&gt;區塊鍊的技術使人們不需要透過第三方媒介來託管資訊,每個人都可自行控制自己</summary>
       
     
     
@@ -229,9 +257,9 @@
     <category term="AI" scheme="https://timtimtimchen.github.io/categories/AI/"/>
     
     
-    <category term="ai" scheme="https://timtimtimchen.github.io/tags/ai/"/>
-    
     <category term="embedding" scheme="https://timtimtimchen.github.io/tags/embedding/"/>
+    
+    <category term="ai" scheme="https://timtimtimchen.github.io/tags/ai/"/>
     
   </entry>
   
