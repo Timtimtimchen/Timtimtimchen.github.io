@@ -95,9 +95,9 @@
     
     <category term="Blockchain" scheme="https://timtimtimchen.github.io/tags/Blockchain/"/>
     
-    <category term="Python" scheme="https://timtimtimchen.github.io/tags/Python/"/>
-    
     <category term="Web3" scheme="https://timtimtimchen.github.io/tags/Web3/"/>
+    
+    <category term="Python" scheme="https://timtimtimchen.github.io/tags/Python/"/>
     
     <category term="TelegramBot" scheme="https://timtimtimchen.github.io/tags/TelegramBot/"/>
     
@@ -127,15 +127,15 @@
     
     <category term="Blockchain" scheme="https://timtimtimchen.github.io/tags/Blockchain/"/>
     
-    <category term="Ethereum" scheme="https://timtimtimchen.github.io/tags/Ethereum/"/>
-    
-    <category term="Web3" scheme="https://timtimtimchen.github.io/tags/Web3/"/>
-    
     <category term="Mixer" scheme="https://timtimtimchen.github.io/tags/Mixer/"/>
     
     <category term="ZKP" scheme="https://timtimtimchen.github.io/tags/ZKP/"/>
     
     <category term="Smart Contract" scheme="https://timtimtimchen.github.io/tags/Smart-Contract/"/>
+    
+    <category term="Ethereum" scheme="https://timtimtimchen.github.io/tags/Ethereum/"/>
+    
+    <category term="Web3" scheme="https://timtimtimchen.github.io/tags/Web3/"/>
     
   </entry>
   
@@ -288,9 +288,9 @@
     <category term="AI" scheme="https://timtimtimchen.github.io/categories/AI/"/>
     
     
-    <category term="embedding" scheme="https://timtimtimchen.github.io/tags/embedding/"/>
-    
     <category term="ai" scheme="https://timtimtimchen.github.io/tags/ai/"/>
+    
+    <category term="embedding" scheme="https://timtimtimchen.github.io/tags/embedding/"/>
     
   </entry>
   
@@ -451,11 +451,11 @@
     <category term="AI" scheme="https://timtimtimchen.github.io/categories/AI/"/>
     
     
+    <category term="embedding" scheme="https://timtimtimchen.github.io/tags/embedding/"/>
+    
     <category term="flowise" scheme="https://timtimtimchen.github.io/tags/flowise/"/>
     
     <category term="qrant" scheme="https://timtimtimchen.github.io/tags/qrant/"/>
-    
-    <category term="embedding" scheme="https://timtimtimchen.github.io/tags/embedding/"/>
     
   </entry>
   

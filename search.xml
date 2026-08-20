@@ -66,9 +66,9 @@
             
             <tag> Blockchain </tag>
             
-            <tag> Python </tag>
-            
             <tag> Web3 </tag>
+            
+            <tag> Python </tag>
             
             <tag> TelegramBot </tag>
             
@@ -93,15 +93,15 @@
             
             <tag> Blockchain </tag>
             
-            <tag> Ethereum </tag>
-            
-            <tag> Web3 </tag>
-            
             <tag> Mixer </tag>
             
             <tag> ZKP </tag>
             
             <tag> Smart Contract </tag>
+            
+            <tag> Ethereum </tag>
+            
+            <tag> Web3 </tag>
             
         </tags>
       
@@ -245,9 +245,9 @@
       
         <tags>
             
-            <tag> embedding </tag>
-            
             <tag> ai </tag>
+            
+            <tag> embedding </tag>
             
         </tags>
       
@@ -409,11 +409,11 @@
       
         <tags>
             
+            <tag> embedding </tag>
+            
             <tag> flowise </tag>
             
             <tag> qrant </tag>
-            
-            <tag> embedding </tag>
             
         </tags>
       
