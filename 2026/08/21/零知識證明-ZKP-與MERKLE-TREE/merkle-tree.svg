@@ -1,0 +1,77 @@
+<svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans TC', 'Microsoft JhengHei', sans-serif">
+  <rect width="900" height="560" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" font-size="22" font-weight="bold" fill="#1f2937">Merkle Tree 結構示意圖</text>
+
+  <!-- Connecting lines: Root to Level1 -->
+  <line x1="450" y1="90" x2="290" y2="170" stroke="#9ca3af" stroke-width="2"/>
+  <line x1="450" y1="90" x2="610" y2="170" stroke="#9ca3af" stroke-width="2"/>
+
+  <!-- Connecting lines: Level1 to Level2 -->
+  <line x1="290" y1="210" x2="170" y2="290" stroke="#9ca3af" stroke-width="2"/>
+  <line x1="290" y1="210" x2="410" y2="290" stroke="#9ca3af" stroke-width="2"/>
+  <line x1="610" y1="210" x2="530" y2="290" stroke="#9ca3af" stroke-width="2"/>
+  <line x1="610" y1="210" x2="730" y2="290" stroke="#9ca3af" stroke-width="2"/>
+
+  <!-- Connecting lines: Level2 to Leaves -->
+  <line x1="170" y1="330" x2="110" y2="410" stroke="#9ca3af" stroke-width="2"/>
+  <line x1="170" y1="330" x2="230" y2="410" stroke="#9ca3af" stroke-width="2"/>
+  <line x1="410" y1="330" x2="350" y2="410" stroke="#9ca3af" stroke-width="2"/>
+  <line x1="410" y1="330" x2="470" y2="410" stroke="#9ca3af" stroke-width="2"/>
+  <line x1="530" y1="330" x2="590" y2="410" stroke="#9ca3af" stroke-width="2"/>
+  <line x1="530" y1="330" x2="650" y2="410" stroke="#9ca3af" stroke-width="2"/>
+  <line x1="730" y1="330" x2="770" y2="410" stroke="#9ca3af" stroke-width="2"/>
+  <line x1="730" y1="330" x2="850" y2="410" stroke="#9ca3af" stroke-width="2"/>
+
+  <!-- Root -->
+  <rect x="390" y="55" width="120" height="40" rx="8" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
+  <text x="450" y="80" text-anchor="middle" font-size="15" font-weight="bold" fill="#991b1b">Root</text>
+
+  <!-- Level 1 -->
+  <rect x="230" y="170" width="120" height="40" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="290" y="195" text-anchor="middle" font-size="14" fill="#92400e">Hash(1,2)</text>
+  <rect x="550" y="170" width="120" height="40" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="610" y="195" text-anchor="middle" font-size="14" fill="#92400e">Hash(3,4)</text>
+
+  <!-- Level 2 -->
+  <rect x="115" y="290" width="110" height="40" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  <text x="170" y="315" text-anchor="middle" font-size="13" fill="#1e40af">Hash(L1,L2)</text>
+  <rect x="355" y="290" width="110" height="40" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  <text x="410" y="315" text-anchor="middle" font-size="13" fill="#1e40af">Hash(L3,L4)</text>
+  <rect x="475" y="290" width="110" height="40" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  <text x="530" y="315" text-anchor="middle" font-size="13" fill="#1e40af">Hash(L5,L6)</text>
+  <rect x="675" y="290" width="110" height="40" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  <text x="730" y="315" text-anchor="middle" font-size="13" fill="#1e40af">Hash(L7,L8)</text>
+
+  <!-- Leaves -->
+  <g font-size="13" fill="#166534">
+    <rect x="65" y="410" width="90" height="40" rx="8" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+    <text x="110" y="435" text-anchor="middle">Leaf 1</text>
+    <rect x="185" y="410" width="90" height="40" rx="8" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+    <text x="230" y="435" text-anchor="middle">Leaf 2</text>
+    <rect x="305" y="410" width="90" height="40" rx="8" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+    <text x="350" y="435" text-anchor="middle">Leaf 3</text>
+    <rect x="425" y="410" width="90" height="40" rx="8" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+    <text x="470" y="435" text-anchor="middle">Leaf 4</text>
+    <rect x="545" y="410" width="90" height="40" rx="8" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+    <text x="590" y="435" text-anchor="middle">Leaf 5</text>
+    <rect x="605" y="410" width="90" height="40" rx="8" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+    <text x="650" y="435" text-anchor="middle">Leaf 6</text>
+    <rect x="725" y="410" width="90" height="40" rx="8" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+    <text x="770" y="435" text-anchor="middle">Leaf 7</text>
+    <rect x="805" y="410" width="90" height="40" rx="8" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+    <text x="850" y="435" text-anchor="middle">Leaf 8</text>
+  </g>
+
+  <!-- Leaf data labels -->
+  <text x="450" y="480" text-anchor="middle" font-size="13" fill="#4b5563">每個 Leaf = Hash(原始資料)，例如 commitment、帳戶、投票資訊…</text>
+
+  <!-- Highlight path example -->
+  <rect x="65" y="405" width="90" height="50" rx="8" fill="none" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,3"/>
+  <rect x="115" y="285" width="110" height="50" rx="8" fill="none" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,3"/>
+  <rect x="230" y="165" width="120" height="50" rx="8" fill="none" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,3"/>
+  <rect x="390" y="50" width="120" height="50" rx="8" fill="none" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,3"/>
+  <text x="450" y="510" text-anchor="middle" font-size="13" fill="#ef4444">紅色虛線 = Leaf 1 的 Merkle Path（只需 log₂N 個節點即可驗證是否屬於 Root）</text>
+  <text x="450" y="535" text-anchor="middle" font-size="13" fill="#6b7280">可以理解為：只提供「一條驗證路徑」，就能證明某筆資料存在於整個資料集中，而不需要公開整棵樹</text>
+</svg>

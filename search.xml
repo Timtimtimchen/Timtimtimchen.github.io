@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>零知識證明(ZKP)與MERKLE TREE</title>
+      <link href="/2026/08/21/%E9%9B%B6%E7%9F%A5%E8%AD%98%E8%AD%89%E6%98%8E-ZKP-%E8%88%87MERKLE-TREE/"/>
+      <url>/2026/08/21/%E9%9B%B6%E7%9F%A5%E8%AD%98%E8%AD%89%E6%98%8E-ZKP-%E8%88%87MERKLE-TREE/</url>
+      
+        <content type="html"><![CDATA[<ul><li><strong>零知識證明（ZKP）</strong>：證明「我知道答案」，但不透露答案內容。</li><li><strong>Merkle Tree</strong>：利用單一 Root Hash，快速證明「某筆資料存在於指定集合中」。</li><li><strong>兩者結合</strong>：證明「我符合資格且屬於某合法集合」，同時隱匿個人身份與秘密。</li></ul><hr><h2 id="1-什麼是零知識證明？"><a href="#1-什麼是零知識證明？" class="headerlink" title="1. 什麼是零知識證明？"></a>1. 什麼是零知識證明？</h2><p>以「密碼鎖」為例：</p><p>門內 (B)<br>┌───────────┐<br>│ 驗證者 B  │<br>└─────┬─────┘<br>      │<br>    🔐 密碼鎖<br>      │<br>┌─────┴─────┐<br>│ 證明者 A  │<br>└───────────┘<br>  門外 (A)</p><ul><li><strong>傳統方式</strong>：A 直接告訴 B「密碼是 123456」（洩漏秘密）。</li><li><strong>ZKP 方式</strong>：A 直接操作密碼鎖開門。B 見證門被開啟，即確信「A 知道密碼」，但全程未接觸到密碼本身。</li></ul><h3 id="核心三性質"><a href="#核心三性質" class="headerlink" title="核心三性質"></a>核心三性質</h3><ul><li><strong>完備性（Completeness）</strong>：若陳述為真，誠實的證明者必能說服驗證者。</li><li><strong>健全性（Soundness）</strong>：若陳述為假，作弊者極不可能騙過驗證者。</li><li><strong>零知識性（Zero-Knowledge）</strong>：驗證者除了得知「陳述為真」外，獲取不到任何私密資訊。</li></ul><hr><h2 id="2-技術實作：SnarkJS-Pipeline"><a href="#2-技術實作：SnarkJS-Pipeline" class="headerlink" title="2. 技術實作：SnarkJS Pipeline"></a>2. 技術實作：SnarkJS Pipeline</h2><p>基於 <a href="https://github.com/iden3/snarkjs">snarkjs</a> 的標準流程：</p><ol><li><strong>定義電路</strong>：使用 <strong>Circom</strong> 編寫計算約束，編譯輸出 <code>.r1cs</code>（約束系統）與 <code>.wasm</code>（計算 Witness）。</li><li><strong>計算 Witness</strong>：將私密輸入（<code>secret</code>、<code>nullifier</code>）傳入 <code>.wasm</code> 計算狀態值。</li><li><strong>Trusted Setup</strong>：生成 <code>.zkey</code>，包含 <strong>Proving Key</strong> 與 <strong>Verification Key</strong>。</li><li><strong>生成證明</strong>：以 Groth16 演算法結合 <code>Witness + R1CS + Proving Key</code>，產生 <code>proof.json</code> 與公開訊號 <code>public.json</code>。</li><li><strong>鏈上驗證</strong>：將證明傳送至 <code>Verifier.sol</code> 合約驗證。</li></ol><blockquote><p><code>proof.json</code> 僅包含橢圓曲線的數學證明，完全不含原始私鑰或秘密輸入。</p></blockquote><img src="/2026/08/21/零知識證明-ZKP-與MERKLE-TREE/zkp-flow.png"  width="250" height="350"><hr><h2 id="3-什麼是-Merkle-Tree？"><a href="#3-什麼是-Merkle-Tree？" class="headerlink" title="3. 什麼是 Merkle Tree？"></a>3. 什麼是 Merkle Tree？</h2><p>Merkle Tree 為層級雜湊結構：</p><ol><li><strong>Leaf（葉節點）</strong>：原始資料的 Hash 值。</li><li><strong>中間節點</strong>：相鄰兩節點的 Hash 組合後再次 Hash，逐層向上收斂。</li><li><strong>Root</strong>：頂層唯一的 Hash 值，作為整份資料集的指紋。</li></ol><p>只要任何底層資料變更，Root 即完全改變。</p><h3 id="Merkle-Proof（Merkle-Path）"><a href="#Merkle-Proof（Merkle-Path）" class="headerlink" title="Merkle Proof（Merkle Path）"></a>Merkle Proof（Merkle Path）</h3><p>證明某資料存在於樹中，無需公開完整資料集，僅需提供該葉節點向上至 Root 的路徑雜湊（共 log_2 N 個節點），即可供他人比對 Root 是否相符。</p><img src="/2026/08/21/%E9%9B%B6%E7%9F%A5%E8%AD%98%E8%AD%89%E6%98%8E-ZKP-%E8%88%87MERKLE-TREE/merkle-tree.svg" class="" title="Merkle Tree 結構"><hr><h2 id="4-ZKP-Merkle-Tree-的結合應用"><a href="#4-ZKP-Merkle-Tree-的結合應用" class="headerlink" title="4. ZKP + Merkle Tree 的結合應用"></a>4. ZKP + Merkle Tree 的結合應用</h2><p>常見於匿名投票、隱私白名單、混幣協議等場景，用以解決：<strong>「證明自己屬於某集合，但不透露具體身份」</strong>。</p><ul><li><strong>Merkle Tree</strong>：將整份白名單壓縮為單一鏈上 Root。</li><li><strong>ZKP 電路</strong>：證明「我擁有的 <code>secret</code> 所生成的 <code>commitment</code> 與 Merkle Path，可正確推導出公開的 Root」，且運算過程中的 <code>secret</code>、葉節點索引皆不公開。</li></ul><p>證明者 (A) 持有：Secret + Merkle Path<br>│<br>▼<br>ZKP 電路生成 Proof<br>│<br>▼<br>驗證者 &#x2F; 智能合約：驗證 Proof 與公開 Root<br>│<br>▼<br>確認為授權成員，但不知其具體身份</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Blockchain </tag>
+            
+            <tag> Zero Knowledge Proof </tag>
+            
+            <tag> Merkle Tree </tag>
+            
+            <tag> Snarkjs </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>自製 NCUE 區塊鏈（Private Ethereum Chain）</title>
       <link href="/2026/05/10/%E8%87%AA%E8%A3%BDNCUE%E5%8D%80%E5%A1%8A%E9%8F%88/"/>
       <url>/2026/05/10/%E8%87%AA%E8%A3%BDNCUE%E5%8D%80%E5%A1%8A%E9%8F%88/</url>
@@ -41,9 +66,9 @@
             
             <tag> Blockchain </tag>
             
-            <tag> Web3 </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Web3 </tag>
             
             <tag> TelegramBot </tag>
             
@@ -68,15 +93,15 @@
             
             <tag> Blockchain </tag>
             
+            <tag> Ethereum </tag>
+            
+            <tag> Web3 </tag>
+            
             <tag> Mixer </tag>
             
             <tag> ZKP </tag>
             
             <tag> Smart Contract </tag>
-            
-            <tag> Ethereum </tag>
-            
-            <tag> Web3 </tag>
             
         </tags>
       
@@ -220,9 +245,9 @@
       
         <tags>
             
-            <tag> ai </tag>
-            
             <tag> embedding </tag>
+            
+            <tag> ai </tag>
             
         </tags>
       
